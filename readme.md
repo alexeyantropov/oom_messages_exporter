@@ -44,7 +44,7 @@ oom_messages_exporter_kills_total{command="framework",contanier="nodejs",namespa
 ## Production
 ```
 # pip install oom_messages_exporter
-# python3.7 oom_messages_exporter.py
+# python3.9 oom_messages_exporter.py
 ```
 ## Config
 All runtine conguration provides by environment variables:
@@ -52,4 +52,5 @@ All runtine conguration provides by environment variables:
 - oom_messages_exporter_POLL_INTERVAL - log polling interval (1 (sec) by default)
 - oom_messages_exporter_MESSAGES_LOG - a path to log (defult: /var/log/messages)
 # Dependencies
+- python 3.9
 - prometheus_client

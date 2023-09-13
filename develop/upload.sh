@@ -23,8 +23,9 @@ else
     echo "Do not run upload.sh!"
     exit 1
 fi
+
 pypi_rc='./.pypirc.ini'
-#check_file $pypi_rc
+check_file $pypi_rc
 
 find ./dist/ -delete
 $PYTHON_EXE -m build && \
