@@ -15,7 +15,9 @@ fi
 source $env_file 
 export $(eval "echo \"$(cat $env_file)\"")
 
+chmod 000 $file_zero_mode
 $PYTEST_EXE ./tests/*.py -vvv --cov ./src --cov-report term --cov-report html:${cov_report_dir}
 if test -f /usr/bin/open; then
     /usr/bin/open ${cov_report_dir}/index.html
 fi
+chmod 640 $file_zero_mode
