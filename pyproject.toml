@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oom_messages_exporter"
+version = "20230913"
+dependencies = [
+    "prometheus_client>=0.17.1"
+]
+
+authors = [
+  { name="Alexey Antropov", email="alexeyantropov@gmail.com" },
+]
+description = "Collect OOM Killer messages from /var/log/messages and represent the data in Prometheus."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/alexeyantropov/oom_messages_exporter"
+"Bug Tracker" = "https://github.com/alexeyantropov/oom_messages_exporter/issues"
