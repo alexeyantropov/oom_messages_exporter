@@ -40,10 +40,14 @@ $ ~/miniconda/bin/conda env remove -n oom_messages_exporter_test
 # How to run 
 
 ## tests
+Before you begin:
+```
+$ chmod 000 ./messages/zero-file-mode-file.txt
+```
+Now the env is ready, you can tests:
 ```
 $ ./tests/run.sh
 ```
-
 ## example
 Send Ctrl+C after the end of presentaion.
 ```
