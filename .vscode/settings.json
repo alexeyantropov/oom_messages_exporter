@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "~/miniconda/envs/oom_messages_exporter/bin/python",
+    "python.analysis.extraPaths": [
+        "./src"
+    ]
+}

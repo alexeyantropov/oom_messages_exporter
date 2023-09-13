@@ -1,0 +1,14 @@
+---
+name: oom_messages_exporter
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip=23.2
+  - build
+  - prometheus_client=0.17.1
+  - pip:
+      - pytest==7.1.2
+      - pytest-cov==4.0.0
+      - twine
