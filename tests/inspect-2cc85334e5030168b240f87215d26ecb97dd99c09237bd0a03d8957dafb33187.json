@@ -1,0 +1,9 @@
+{
+    "status": {
+      "labels": {
+        "io.kubernetes.container.name": "nodejs",
+        "io.kubernetes.pod.name": "awesome-backend",
+        "io.kubernetes.pod.namespace": "lovely-project"
+      }
+    }
+}
