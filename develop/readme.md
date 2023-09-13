@@ -33,7 +33,7 @@ A workspace configuration into ./.vscode/settings.json. It contains the path for
 ```
 $ ~/miniconda/bin/conda env create -f ./develop/miniconda-environment-pypi-test.yml
 $ ~/miniconda/envs/oom_messages_exporter_test/bin/python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ oom-messages-exporter
-$ ~/miniconda/envs/oom_messages_exporter_test/bin/python3 ~/miniconda/envs/oom_messages_exporter_test/lib/python3.9/site-packages/exporter.py
+$ ~/miniconda/envs/oom_messages_exporter_test/bin/python3 ~/miniconda/envs/oom_messages_exporter_test/lib/python3.9/site-packages/oom_messages_exporter.py
 $ ~/miniconda/bin/conda env remove -n oom_messages_exporter_test
 ```
 
