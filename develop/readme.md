@@ -1,5 +1,5 @@
 # Disclaimer
-Originally I use MacOS for developing and write all scripts for Mac. Ispite of this there isn't any reason for not working on Linux systems but could get some difficulties on Windows.
+Originally I use MacOS for developing and write all scripts for Mac. In spite of this there isn't any reason for not working on Linux systems but could get some difficulties on Windows.
 
 # VS Code and miniconda intergration
 
@@ -44,7 +44,7 @@ $ ~/miniconda/bin/conda env remove -n oom_messages_exporter_test
 $ ./tests/run.sh
 ```
 ## example
-Send Ctrl+C after the end of presentaion.
+Send Ctrl+C after the end of presentation.
 ```
 $ ./examples/exporter-containerd.sh
 ```

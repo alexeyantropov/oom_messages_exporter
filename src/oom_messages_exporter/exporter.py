@@ -19,7 +19,7 @@ class Exporter:
         """
         :param log: by default if's /var/log/messages.
         :param interval: the log pooling interval.
-        :param test_enaboe: do not use it.
+        :param test_enable: do not use it.
         """
 
         self.log = log
@@ -42,7 +42,7 @@ class Exporter:
         Initialization of prometheus metrics.
         """
 
-        labels = ['pid', 'command', 'namespace', 'pod', 'contanier']
+        labels = ['pid', 'command', 'namespace', 'pod', 'container']
         self.kills = Counter(self.metrics_name,
             'The count of OOM operations, label "pid" has pid of a killed process, the label "command" is a proctitle of the killed process.',
             labels)
@@ -145,7 +145,7 @@ class Exporter:
 
         # If nothing interesting were found the code would write a dummy string.
         n = 50
-        logging.debug('Got string w/o OOM, the first {} symblos: "{}"'.format(n, line[0:n]))
+        logging.debug('Got string w/o OOM, the first {} symbols: "{}"'.format(n, line[0:n]))
 
         return('has not any')
 
@@ -183,7 +183,7 @@ def main(): # pragma: no cover
     debug_enable = os.getenv('oom_messages_exporter_DEBUG', 'no')
     exporter_port = int(os.getenv('oom_messages_exporter_PORT', 9001))
     messages_log = os.getenv('oom_messages_exporter_MESSAGES_LOG', '/var/log/messages')
-    poll_inverval = int(os.getenv('oom_messages_exporter_POLL_INTERVAL', 1))
+    poll_interval = int(os.getenv('oom_messages_exporter_POLL_INTERVAL', 1))
     
     # Set debug logging
     if debug_enable != 'no':
@@ -194,7 +194,7 @@ def main(): # pragma: no cover
     start_http_server(int(exporter_port))
 
     # The exporter setup
-    ex = Exporter(log=messages_log, interval=poll_inverval, test_enable=test_enable)
+    ex = Exporter(log=messages_log, interval=poll_interval, test_enable=test_enable)
     logging.info('oom_messages_exporter started! port: {}.'.format(exporter_port))
 
     # Run it!
