@@ -6,13 +6,13 @@ from pathlib import Path
 from shutil import which
 from typing import TypedDict
 
-class ContanerLabels(TypedDict):
+class ContainerLabels(TypedDict):
     container_name: str
     pod_name: str
     pod_namespace: str
 
 class PodByPid(TypedDict):
-    int: ContanerLabels
+    int: ContainerLabels
 
 class CriCollector:
 
@@ -93,7 +93,7 @@ class CriCollector:
         logging.critical('Runtime socket is not found!')
         return(None)
     
-    def cri_inspect(self, id) -> ContanerLabels:
+    def cri_inspect(self, id) -> ContainerLabels:
 
         """
         The crictl binary wrapper. Runs 'crctl inspect' with given container id.
@@ -110,15 +110,15 @@ class CriCollector:
         crictl_out = subprocess.run(cmd, capture_output=True, text=True)
 
         if len(crictl_out.stderr) > 0:
-            return(ContanerLabels())
+            return(ContainerLabels())
 
         try:
             crictl_out_json = json.loads(crictl_out.stdout)
         except:
-            return(ContanerLabels())
+            return(ContainerLabels())
 
         if 'status' in crictl_out_json and 'labels' in crictl_out_json['status']:
-            ret = ContanerLabels()
+            ret = ContainerLabels()
             labels = crictl_out_json['status']['labels']
 
             if 'io.kubernetes.container.name' in labels:
@@ -130,7 +130,7 @@ class CriCollector:
             return(ret)
         
         # Nothing is found, return an empty data set.
-        return(ContanerLabels())
+        return(ContainerLabels())
     
     def get_pid_from_oom_line(self, line: str) -> int:
 
@@ -188,10 +188,10 @@ class CriCollector:
         
         return(-1)
     
-    def get(self, pid: int) -> ContanerLabels:
+    def get(self, pid: int) -> ContainerLabels:
 
         """
-        The method returns exta info about a given pid from the collection.
+        The method returns extra info about a given pid from the collection.
         """
 
         if pid in self.collection:

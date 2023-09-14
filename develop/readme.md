@@ -1,5 +1,5 @@
 # Disclaimer
-Originally I use MacOS for developing and write all scripts for Mac. Ispite of this there isn't any reason for not working on Linux systems but could get some difficulties on Windows.
+Originally I use MacOS for developing and write all scripts for Mac. In spite of this there isn't any reason for not working on Linux systems but could get some difficulties on Windows.
 
 # VS Code and miniconda intergration
 
@@ -7,7 +7,7 @@ Originally I use MacOS for developing and write all scripts for Mac. Ispite of t
 
 ### Install the miniconda distro if it's needed 
 ```
-# curl -o /tmp/m.sh -s https://repo.anaconda.com/miniconda/Miniconda3-py39_23.5.2-0-MacOSX-arm64.sh && bash /tmp/m.sh -b -p $HOME/miniconda
+# curl -o /tmp/m.sh -s https://repo.anaconda.com/miniconda/Miniconda3-py39_23.5.2-0-MacOSX-$(uname -m).sh && bash /tmp/m.sh -b -p $HOME/miniconda
 ```
 
 ### Prepare a separate env
@@ -44,7 +44,7 @@ $ ~/miniconda/bin/conda env remove -n oom_messages_exporter_test
 $ ./tests/run.sh
 ```
 ## example
-Send Ctrl+C after the end of presentaion.
+Send Ctrl+C after the end of presentation.
 ```
 $ ./examples/exporter-containerd.sh
 ```

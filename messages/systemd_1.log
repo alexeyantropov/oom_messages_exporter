@@ -1,0 +1,756 @@
+Sep  4 00:01:09 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 00:01:10 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 00:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:03:06.02899474Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:05:58 other-server kernel: [38469674.211820] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 00:05:58 other-server kernel: [38469674.211824] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 00:05:58 other-server kernel: [38469674.211828] CPU: 5 PID: 1847 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 00:05:58 other-server kernel: [38469674.211829] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 00:05:58 other-server kernel: [38469674.211830] Call Trace:
+Sep  4 00:05:58 other-server kernel: [38469674.211836]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 00:05:58 other-server kernel: [38469674.211840]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 00:05:58 other-server kernel: [38469674.211844]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 00:05:58 other-server kernel: [38469674.211848]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 00:05:58 other-server kernel: [38469674.211850]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 00:05:58 other-server kernel: [38469674.211853]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 00:05:58 other-server kernel: [38469674.211855]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 00:05:58 other-server kernel: [38469674.211857]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 00:05:58 other-server kernel: [38469674.211869]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 00:05:58 other-server kernel: [38469674.211872]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 00:05:58 other-server kernel: [38469674.211874]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 00:05:58 other-server kernel: [38469674.211876]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 00:05:58 other-server kernel: [38469674.211878] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 00:05:58 other-server kernel: [38469674.211900] memory: usage 1048576kB, limit 1048576kB, failcnt 312166
+Sep  4 00:05:58 other-server kernel: [38469674.211901] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:05:58 other-server kernel: [38469674.211902] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:05:58 other-server kernel: [38469674.211903] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048432KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 00:05:58 other-server kernel: [38469674.211930] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 00:05:58 other-server kernel: [38469674.212026] [32525]    80 32525   278951    61250     451        0             0 node
+Sep  4 00:05:58 other-server kernel: [38469674.212071] [  754]    80   754   262835    45260     359        0             0 node /opt/www/p
+Sep  4 00:05:58 other-server kernel: [38469674.212074] [ 1847]    80  1847   300778    86316     507        0             0 node /opt/www/p
+Sep  4 00:05:58 other-server kernel: [38469674.212076] [ 4467]    80  4467   257790    47876     313        0             0 node /opt/www/p
+Sep  4 00:05:58 other-server kernel: [38469674.212080] [24190]    80 24190   257630    40299     320        0             0 node /opt/www/p
+Sep  4 00:05:58 other-server kernel: [38469674.212093] Memory cgroup out of memory: Kill process 1858 (node /opt/www/p) score 331 or sacrifice child
+Sep  4 00:05:58 other-server kernel: [38469674.213429] Killed process 1847 (node /opt/www/p), UID 80, total-vm:1203112kB, anon-rss:329556kB, file-rss:15708kB, shmem-rss:0kB
+Sep  4 00:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:08:06.029044177Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:13:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:13:06.028978986Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:14:47 other-server kernel: [38470203.243348] node invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 00:14:47 other-server kernel: [38470203.243353] node cpuset=/ mems_allowed=0-1
+Sep  4 00:14:47 other-server kernel: [38470203.243357] CPU: 7 PID: 757 Comm: node Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 00:14:47 other-server kernel: [38470203.243359] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 00:14:47 other-server kernel: [38470203.243360] Call Trace:
+Sep  4 00:14:47 other-server kernel: [38470203.243369]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 00:14:47 other-server kernel: [38470203.243374]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 00:14:47 other-server kernel: [38470203.243380]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 00:14:47 other-server kernel: [38470203.243386]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 00:14:47 other-server kernel: [38470203.243388]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 00:14:47 other-server kernel: [38470203.243392]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 00:14:47 other-server kernel: [38470203.243395]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 00:14:47 other-server kernel: [38470203.243398]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 00:14:47 other-server kernel: [38470203.243400]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 00:14:47 other-server kernel: [38470203.243405]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 00:14:47 other-server kernel: [38470203.243407]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 00:14:47 other-server kernel: [38470203.243409]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 00:14:47 other-server kernel: [38470203.243412] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 00:14:47 other-server kernel: [38470203.243414] memory: usage 1048576kB, limit 1048576kB, failcnt 312268
+Sep  4 00:14:47 other-server kernel: [38470203.243416] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:14:47 other-server kernel: [38470203.243417] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:14:47 other-server kernel: [38470203.243418] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048400KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 00:14:47 other-server kernel: [38470203.243430] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 00:14:47 other-server kernel: [38470203.243507] [32525]    80 32525   278951    61289     451        0             0 node
+Sep  4 00:14:47 other-server kernel: [38470203.243552] [  754]    80   754   267827    58377     399        0             0 node /opt/www/p
+Sep  4 00:14:47 other-server kernel: [38470203.243554] [ 4467]    80  4467   259454    50115     326        0             0 node /opt/www/p
+Sep  4 00:14:47 other-server kernel: [38470203.243557] [24190]    80 24190   267128    49888     376        0             0 node /opt/www/p
+Sep  4 00:14:47 other-server kernel: [38470203.243565] [29838]    80 29838   279104    61490     476        0             0 node /opt/www/p
+Sep  4 00:14:47 other-server kernel: [38470203.243572] Memory cgroup out of memory: Kill process 29848 (node /opt/www/p) score 236 or sacrifice child
+Sep  4 00:14:47 other-server kernel: [38470203.245101] Killed process 29838 (node /opt/www/p), UID 80, total-vm:1116416kB, anon-rss:230308kB, file-rss:15652kB, shmem-rss:0kB
+Sep  4 00:15:38 other-server kernel: [38470254.032189] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 00:15:38 other-server kernel: [38470254.032193] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 00:15:38 other-server kernel: [38470254.032196] CPU: 0 PID: 754 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 00:15:38 other-server kernel: [38470254.032197] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 00:15:38 other-server kernel: [38470254.032198] Call Trace:
+Sep  4 00:15:38 other-server kernel: [38470254.032204]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 00:15:38 other-server kernel: [38470254.032207]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 00:15:38 other-server kernel: [38470254.032211]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 00:15:38 other-server kernel: [38470254.032215]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 00:15:38 other-server kernel: [38470254.032217]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 00:15:38 other-server kernel: [38470254.032220]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 00:15:38 other-server kernel: [38470254.032223]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 00:15:38 other-server kernel: [38470254.032226]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 00:15:38 other-server kernel: [38470254.032229]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 00:15:38 other-server kernel: [38470254.032233]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 00:15:38 other-server kernel: [38470254.032236]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 00:15:38 other-server kernel: [38470254.032238]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 00:15:38 other-server kernel: [38470254.032241] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 00:15:38 other-server kernel: [38470254.032244] memory: usage 1048576kB, limit 1048576kB, failcnt 312389
+Sep  4 00:15:38 other-server kernel: [38470254.032245] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:15:38 other-server kernel: [38470254.032246] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:15:38 other-server kernel: [38470254.032247] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048440KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 00:15:38 other-server kernel: [38470254.032259] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 00:15:38 other-server kernel: [38470254.032341] [32525]    80 32525   278951    61422     451        0             0 node
+Sep  4 00:15:38 other-server kernel: [38470254.032385] [  754]    80   754   317770   101519     610        0             0 node /opt/www/p
+Sep  4 00:15:38 other-server kernel: [38470254.032387] [ 4467]    80  4467   259454    42011     326        0             0 node /opt/www/p
+Sep  4 00:15:38 other-server kernel: [38470254.032390] [24190]    80 24190   267256    49973     377        0             0 node /opt/www/p
+Sep  4 00:15:38 other-server kernel: [38470254.032399] [22816]    80 22816   244340    26098     242        0             0 node /opt/www/p
+Sep  4 00:15:38 other-server kernel: [38470254.032408] Memory cgroup out of memory: Kill process 764 (node /opt/www/p) score 389 or sacrifice child
+Sep  4 00:15:38 other-server kernel: [38470254.033674] Killed process 754 (node /opt/www/p), UID 80, total-vm:1271080kB, anon-rss:390400kB, file-rss:15676kB, shmem-rss:0kB
+Sep  4 00:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:18:06.028993608Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:20:26 other-server prometheus-agent[5232]: ts=2023-09-03T21:20:26.549Z caller=db.go:557 level=info msg="series GC completed" duration=2.988819ms
+Sep  4 00:20:26 other-server prometheus-agent[5232]: ts=2023-09-03T21:20:26.549Z caller=checkpoint.go:98 level=info msg="Creating checkpoint" from_segment=5613 to_segment=5614 mint=1693776022000
+Sep  4 00:20:26 other-server prometheus-agent[5232]: ts=2023-09-03T21:20:26.777Z caller=db.go:628 level=info msg="WAL checkpoint complete" first=5613 last=5614 duration=230.953293ms
+Sep  4 00:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:23:06.029031357Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:33:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:33:06.028978877Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:38:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:38:06.029039534Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:43:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:43:06.029073755Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:43:11 other-server kernel: [38471906.941899] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 00:43:11 other-server kernel: [38471906.941903] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 00:43:11 other-server kernel: [38471906.941906] CPU: 21 PID: 22816 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 00:43:11 other-server kernel: [38471906.941908] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 00:43:11 other-server kernel: [38471906.941909] Call Trace:
+Sep  4 00:43:11 other-server kernel: [38471906.941917]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 00:43:11 other-server kernel: [38471906.941921]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 00:43:11 other-server kernel: [38471906.941926]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 00:43:11 other-server kernel: [38471906.941931]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 00:43:11 other-server kernel: [38471906.941933]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 00:43:11 other-server kernel: [38471906.941936]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 00:43:11 other-server kernel: [38471906.941938]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 00:43:11 other-server kernel: [38471906.941941]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 00:43:11 other-server kernel: [38471906.941943]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 00:43:11 other-server kernel: [38471906.941947]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 00:43:11 other-server kernel: [38471906.941949]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 00:43:11 other-server kernel: [38471906.941951]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 00:43:11 other-server kernel: [38471906.941953] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 00:43:11 other-server kernel: [38471906.941956] memory: usage 1048576kB, limit 1048576kB, failcnt 312448
+Sep  4 00:43:11 other-server kernel: [38471906.941957] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:43:11 other-server kernel: [38471906.941958] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:43:11 other-server kernel: [38471906.941959] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048468KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 00:43:11 other-server kernel: [38471906.941970] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 00:43:11 other-server kernel: [38471906.942065] [32525]    80 32525   278951    61447     451        0             0 node
+Sep  4 00:43:11 other-server kernel: [38471906.942118] [ 4467]    80  4467   258893    48467     311        0             0 node /opt/www/p
+Sep  4 00:43:11 other-server kernel: [38471906.942120] [24190]    80 24190   257077    39805     321        0             0 node /opt/www/p
+Sep  4 00:43:11 other-server kernel: [38471906.942125] [22816]    80 22816   296115    82528     495        0             0 node /opt/www/p
+Sep  4 00:43:11 other-server kernel: [38471906.942127] [25245]    80 25245   266427    48932     377        0             0 node /opt/www/p
+Sep  4 00:43:11 other-server kernel: [38471906.942141] Memory cgroup out of memory: Kill process 22826 (node /opt/www/p) score 316 or sacrifice child
+Sep  4 00:43:11 other-server kernel: [38471906.943635] Killed process 22816 (node /opt/www/p), UID 80, total-vm:1184460kB, anon-rss:314400kB, file-rss:15712kB, shmem-rss:0kB
+Sep  4 00:47:44 other-server kernel: [38472180.558609] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 00:47:44 other-server kernel: [38472180.558613] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 00:47:44 other-server kernel: [38472180.558616] CPU: 3 PID: 24190 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 00:47:44 other-server kernel: [38472180.558617] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 00:47:44 other-server kernel: [38472180.558618] Call Trace:
+Sep  4 00:47:44 other-server kernel: [38472180.558625]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 00:47:44 other-server kernel: [38472180.558628]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 00:47:44 other-server kernel: [38472180.558632]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 00:47:44 other-server kernel: [38472180.558636]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 00:47:44 other-server kernel: [38472180.558638]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 00:47:44 other-server kernel: [38472180.558641]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 00:47:44 other-server kernel: [38472180.558643]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 00:47:44 other-server kernel: [38472180.558646]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 00:47:44 other-server kernel: [38472180.558648]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 00:47:44 other-server kernel: [38472180.558651]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 00:47:44 other-server kernel: [38472180.558653]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 00:47:44 other-server kernel: [38472180.558655]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 00:47:44 other-server kernel: [38472180.558657] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 00:47:44 other-server kernel: [38472180.558659] memory: usage 1048576kB, limit 1048576kB, failcnt 312500
+Sep  4 00:47:44 other-server kernel: [38472180.558660] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:47:44 other-server kernel: [38472180.558661] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 00:47:44 other-server kernel: [38472180.558662] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048468KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 00:47:44 other-server kernel: [38472180.558676] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 00:47:44 other-server kernel: [38472180.558757] [32525]    80 32525   278951    61269     451        0             0 node
+Sep  4 00:47:44 other-server kernel: [38472180.558799] [ 4467]    80  4467   292053    74872     571        0             0 node /opt/www/p
+Sep  4 00:47:44 other-server kernel: [38472180.558801] [24190]    80 24190   249781    36300     264        0             0 node /opt/www/p
+Sep  4 00:47:44 other-server kernel: [38472180.558806] [25245]    80 25245   265915    56382     373        0             0 node /opt/www/p
+Sep  4 00:47:44 other-server kernel: [38472180.558811] [ 9514]    80  9514   262150    52440     363        0             0 node /opt/www/p
+Sep  4 00:47:44 other-server kernel: [38472180.558818] Memory cgroup out of memory: Kill process 4477 (node /opt/www/p) score 287 or sacrifice child
+Sep  4 00:47:44 other-server kernel: [38472180.560157] Killed process 4467 (node /opt/www/p), UID 80, total-vm:1168212kB, anon-rss:283692kB, file-rss:15796kB, shmem-rss:0kB
+Sep  4 00:48:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:48:06.029020216Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:53:06.029014253Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 00:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T21:58:06.02901462Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 01:00:08 other-server kernel: [38472924.238543] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 01:00:08 other-server kernel: [38472924.238548] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 01:00:08 other-server kernel: [38472924.238552] CPU: 11 PID: 21243 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 01:00:08 other-server kernel: [38472924.238554] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 01:00:08 other-server kernel: [38472924.238555] Call Trace:
+Sep  4 01:00:08 other-server kernel: [38472924.238564]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 01:00:08 other-server kernel: [38472924.238570]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 01:00:08 other-server kernel: [38472924.238576]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 01:00:08 other-server kernel: [38472924.238581]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 01:00:08 other-server kernel: [38472924.238584]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 01:00:08 other-server kernel: [38472924.238587]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 01:00:08 other-server kernel: [38472924.238590]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 01:00:08 other-server kernel: [38472924.238592]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 01:00:08 other-server kernel: [38472924.238595]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 01:00:08 other-server kernel: [38472924.238600]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 01:00:08 other-server kernel: [38472924.238602]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 01:00:08 other-server kernel: [38472924.238603]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 01:00:08 other-server kernel: [38472924.238607] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 01:00:08 other-server kernel: [38472924.238609] memory: usage 1048576kB, limit 1048576kB, failcnt 312542
+Sep  4 01:00:08 other-server kernel: [38472924.238610] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 01:00:08 other-server kernel: [38472924.238611] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 01:00:08 other-server kernel: [38472924.238612] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048376KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 01:00:08 other-server kernel: [38472924.238633] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 01:00:08 other-server kernel: [38472924.238714] [32525]    80 32525   278951    61290     451        0             0 node
+Sep  4 01:00:08 other-server kernel: [38472924.238764] [24190]    80 24190   257358    40043     321        0             0 node /opt/www/p
+Sep  4 01:00:08 other-server kernel: [38472924.238769] [25245]    80 25245   266555    49316     378        0             0 node /opt/www/p
+Sep  4 01:00:08 other-server kernel: [38472924.238772] [ 9514]    80  9514   250115    32930     310        0             0 node /opt/www/p
+Sep  4 01:00:08 other-server kernel: [38472924.238778] [21243]    80 21243   311033    97735     616        0             0 node /opt/www/p
+Sep  4 01:00:08 other-server kernel: [38472924.238799] Memory cgroup out of memory: Kill process 21253 (node /opt/www/p) score 375 or sacrifice child
+Sep  4 01:00:08 other-server kernel: [38472924.240130] Killed process 21243 (node /opt/www/p), UID 80, total-vm:1244132kB, anon-rss:375288kB, file-rss:15652kB, shmem-rss:0kB
+Sep  4 01:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 01:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T22:08:06.028990385Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 01:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T22:23:06.029076112Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 01:28:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T22:28:06.029049394Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 01:32:58 other-server kernel: [38474894.042706] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 01:32:58 other-server kernel: [38474894.042711] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 01:32:58 other-server kernel: [38474894.042714] CPU: 17 PID: 24190 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 01:32:58 other-server kernel: [38474894.042715] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 01:32:58 other-server kernel: [38474894.042717] Call Trace:
+Sep  4 01:32:58 other-server kernel: [38474894.042723]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 01:32:58 other-server kernel: [38474894.042726]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 01:32:58 other-server kernel: [38474894.042730]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 01:32:58 other-server kernel: [38474894.042734]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 01:32:58 other-server kernel: [38474894.042736]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 01:32:58 other-server kernel: [38474894.042739]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 01:32:58 other-server kernel: [38474894.042741]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 01:32:58 other-server kernel: [38474894.042743]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 01:32:58 other-server kernel: [38474894.042746]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 01:32:58 other-server kernel: [38474894.042749]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 01:32:58 other-server kernel: [38474894.042751]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 01:32:58 other-server kernel: [38474894.042752]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 01:32:58 other-server kernel: [38474894.042755] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 01:32:58 other-server kernel: [38474894.042757] memory: usage 1048576kB, limit 1048576kB, failcnt 312610
+Sep  4 01:32:58 other-server kernel: [38474894.042758] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 01:32:58 other-server kernel: [38474894.042759] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 01:32:58 other-server kernel: [38474894.042760] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048412KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 01:32:58 other-server kernel: [38474894.042773] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 01:32:58 other-server kernel: [38474894.042852] [32525]    80 32525   278951    61406     451        0             0 node
+Sep  4 01:32:58 other-server kernel: [38474894.042893] [24190]    80 24190   301187    89052     570        0             0 node /opt/www/p
+Sep  4 01:32:58 other-server kernel: [38474894.042897] [25245]    80 25245   260411    43351     330        0             0 node /opt/www/p
+Sep  4 01:32:58 other-server kernel: [38474894.042899] [ 9514]    80  9514   257617    40905     324        0             0 node /opt/www/p
+Sep  4 01:32:58 other-server kernel: [38474894.042902] [25038]    80 25038   263787    46552     371        0             0 node /opt/www/p
+Sep  4 01:32:58 other-server kernel: [38474894.042912] Memory cgroup out of memory: Kill process 24201 (node /opt/www/p) score 341 or sacrifice child
+Sep  4 01:32:58 other-server kernel: [38474894.044202] Killed process 24190 (node /opt/www/p), UID 80, total-vm:1204748kB, anon-rss:340508kB, file-rss:15700kB, shmem-rss:0kB
+Sep  4 01:33:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T22:33:06.029026311Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 01:38:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T22:38:06.029040152Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 01:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T22:58:06.029048066Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 02:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 02:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T23:18:06.029017835Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 02:20:26 other-server prometheus-agent[5232]: ts=2023-09-03T23:20:26.781Z caller=db.go:557 level=info msg="series GC completed" duration=2.792174ms
+Sep  4 02:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T23:53:06.029049622Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 02:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-03T23:58:06.028991334Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 03:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 03:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T00:03:06.029044275Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 03:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T00:53:06.029747965Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 03:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T00:58:06.029006684Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 04:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:03:06.029096727Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:07:42 other-server kernel: [38484177.009345] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 04:07:42 other-server kernel: [38484177.009349] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 04:07:42 other-server kernel: [38484177.009352] CPU: 12 PID: 25038 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 04:07:42 other-server kernel: [38484177.009353] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 04:07:42 other-server kernel: [38484177.009354] Call Trace:
+Sep  4 04:07:42 other-server kernel: [38484177.009360]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 04:07:42 other-server kernel: [38484177.009364]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 04:07:42 other-server kernel: [38484177.009368]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 04:07:42 other-server kernel: [38484177.009372]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 04:07:42 other-server kernel: [38484177.009374]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 04:07:42 other-server kernel: [38484177.009377]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 04:07:42 other-server kernel: [38484177.009379]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 04:07:42 other-server kernel: [38484177.009381]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 04:07:42 other-server kernel: [38484177.009384]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 04:07:42 other-server kernel: [38484177.009387]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 04:07:42 other-server kernel: [38484177.009389]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 04:07:42 other-server kernel: [38484177.009390]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 04:07:42 other-server kernel: [38484177.009392] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 04:07:42 other-server kernel: [38484177.009395] memory: usage 1048576kB, limit 1048576kB, failcnt 312665
+Sep  4 04:07:42 other-server kernel: [38484177.009396] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 04:07:42 other-server kernel: [38484177.009397] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 04:07:42 other-server kernel: [38484177.009398] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048432KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 04:07:42 other-server kernel: [38484177.009412] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 04:07:42 other-server kernel: [38484177.009491] [32525]    80 32525   279210    61638     453        0             0 node
+Sep  4 04:07:42 other-server kernel: [38484177.009536] [25245]    80 25245   260929    49537     332        0             0 node /opt/www/p
+Sep  4 04:07:42 other-server kernel: [38484177.009538] [ 9514]    80  9514   255307    46099     314        0             0 node /opt/www/p
+Sep  4 04:07:42 other-server kernel: [38484177.009540] [25038]    80 25038   303522    90526     578        0             0 node /opt/www/p
+Sep  4 04:07:42 other-server kernel: [38484177.009542] [23977]    80 23977   250482    33304     272        0             0 node /opt/www/p
+Sep  4 04:07:42 other-server kernel: [38484177.009556] Memory cgroup out of memory: Kill process 25048 (node /opt/www/p) score 347 or sacrifice child
+Sep  4 04:07:42 other-server kernel: [38484177.010888] Killed process 25038 (node /opt/www/p), UID 80, total-vm:1214088kB, anon-rss:346392kB, file-rss:15712kB, shmem-rss:0kB
+Sep  4 04:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:08:06.029030717Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:13:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:13:06.029040265Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:17:42 other-server kernel: [38484776.618441] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 04:17:42 other-server kernel: [38484776.618447] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 04:17:42 other-server kernel: [38484776.618450] CPU: 9 PID: 25245 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 04:17:42 other-server kernel: [38484776.618452] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 04:17:42 other-server kernel: [38484776.618453] Call Trace:
+Sep  4 04:17:42 other-server kernel: [38484776.618461]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 04:17:42 other-server kernel: [38484776.618466]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 04:17:42 other-server kernel: [38484776.618471]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 04:17:42 other-server kernel: [38484776.618476]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 04:17:42 other-server kernel: [38484776.618479]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 04:17:42 other-server kernel: [38484776.618482]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 04:17:42 other-server kernel: [38484776.618484]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 04:17:42 other-server kernel: [38484776.618487]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 04:17:42 other-server kernel: [38484776.618489]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 04:17:42 other-server kernel: [38484776.618494]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 04:17:42 other-server kernel: [38484776.618496]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 04:17:42 other-server kernel: [38484776.618498]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 04:17:42 other-server kernel: [38484776.618500] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 04:17:42 other-server kernel: [38484776.618503] memory: usage 1048576kB, limit 1048576kB, failcnt 312692
+Sep  4 04:17:42 other-server kernel: [38484776.618505] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 04:17:42 other-server kernel: [38484776.618506] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 04:17:42 other-server kernel: [38484776.618507] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048560KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 04:17:42 other-server kernel: [38484776.618519] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 04:17:42 other-server kernel: [38484776.618597] [32525]    80 32525   279210    61533     453        0             0 node
+Sep  4 04:17:42 other-server kernel: [38484776.618643] [25245]    80 25245   299219    89613     513        0             0 node /opt/www/p
+Sep  4 04:17:42 other-server kernel: [38484776.618645] [ 9514]    80  9514   258284    41180     332        0             0 node /opt/www/p
+Sep  4 04:17:42 other-server kernel: [38484776.618648] [23977]    80 23977   257778    40650     329        0             0 node /opt/www/p
+Sep  4 04:17:42 other-server kernel: [38484776.618653] [20188]    80 20188   265859    48318     376        0             0 node /opt/www/p
+Sep  4 04:17:42 other-server kernel: [38484776.618665] Memory cgroup out of memory: Kill process 25266 (node /opt/www/p) score 343 or sacrifice child
+Sep  4 04:17:42 other-server kernel: [38484776.620243] Killed process 25245 (node /opt/www/p), UID 80, total-vm:1196876kB, anon-rss:342708kB, file-rss:15744kB, shmem-rss:0kB
+Sep  4 04:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:18:06.029052914Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:20:26 other-server prometheus-agent[5232]: ts=2023-09-04T01:20:26.784Z caller=db.go:557 level=info msg="series GC completed" duration=2.907131ms
+Sep  4 04:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T01:20:28.525Z caller=db.go:628 level=info msg="WAL checkpoint complete" first=5615 last=5616 duration=1.743119265s
+Sep  4 04:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:23:06.029020791Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:28:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:28:06.029021868Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 04:33:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T01:33:06.028992762Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 05:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T02:03:06.029040419Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 05:05:32 other-server kernel: [38487646.990196] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 05:05:32 other-server kernel: [38487646.990200] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 05:05:32 other-server kernel: [38487646.990203] CPU: 1 PID: 9514 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 05:05:32 other-server kernel: [38487646.990205] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 05:05:32 other-server kernel: [38487646.990206] Call Trace:
+Sep  4 05:05:32 other-server kernel: [38487646.990212]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 05:05:32 other-server kernel: [38487646.990216]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 05:05:32 other-server kernel: [38487646.990221]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 05:05:32 other-server kernel: [38487646.990225]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 05:05:32 other-server kernel: [38487646.990227]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 05:05:32 other-server kernel: [38487646.990231]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 05:05:32 other-server kernel: [38487646.990234]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 05:05:32 other-server kernel: [38487646.990237]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 05:05:32 other-server kernel: [38487646.990239]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 05:05:32 other-server kernel: [38487646.990243]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 05:05:32 other-server kernel: [38487646.990245]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 05:05:32 other-server kernel: [38487646.990247]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 05:05:32 other-server kernel: [38487646.990250] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 05:05:32 other-server kernel: [38487646.990252] memory: usage 1048576kB, limit 1048576kB, failcnt 312775
+Sep  4 05:05:32 other-server kernel: [38487646.990253] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 05:05:32 other-server kernel: [38487646.990255] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 05:05:32 other-server kernel: [38487646.990256] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048428KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 05:05:32 other-server kernel: [38487646.990267] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 05:05:32 other-server kernel: [38487646.990354] [32525]    80 32525   279210    61620     453        0             0 node
+Sep  4 05:05:32 other-server kernel: [38487646.990396] [ 9514]    80  9514   256133    46800     317        0             0 node /opt/www/p
+Sep  4 05:05:32 other-server kernel: [38487646.990399] [23977]    80 23977   256831    46282     327        0             0 node /opt/www/p
+Sep  4 05:05:32 other-server kernel: [38487646.990401] [20188]    80 20188   264895    54767     375        0             0 node /opt/www/p
+Sep  4 05:05:32 other-server kernel: [38487646.990404] [16583]    80 16583   280884    71476     481        0             0 node /opt/www/p
+Sep  4 05:05:32 other-server kernel: [38487646.990419] Memory cgroup out of memory: Kill process 16593 (node /opt/www/p) score 274 or sacrifice child
+Sep  4 05:05:32 other-server kernel: [38487646.991897] Killed process 16583 (node /opt/www/p), UID 80, total-vm:1123536kB, anon-rss:270092kB, file-rss:15812kB, shmem-rss:0kB
+Sep  4 05:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T02:08:06.029048462Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 06:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 06:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T03:18:06.028973186Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 06:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T03:20:28.529Z caller=db.go:557 level=info msg="series GC completed" duration=3.929303ms
+Sep  4 06:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T03:58:06.029037036Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 07:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 08:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 08:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T05:03:06.029006942Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 08:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T05:18:06.029026977Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 08:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T05:20:28.537Z caller=db.go:557 level=info msg="series GC completed" duration=7.031957ms
+Sep  4 08:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T05:20:28.537Z caller=checkpoint.go:98 level=info msg="Creating checkpoint" from_segment=5617 to_segment=5618 mint=1693804827000
+Sep  4 08:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T05:20:28.774Z caller=db.go:628 level=info msg="WAL checkpoint complete" first=5617 last=5618 duration=243.896991ms
+Sep  4 08:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T05:23:06.029034489Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 08:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T05:58:06.029015704Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 09:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 09:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T06:53:06.029035455Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 09:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T06:58:06.029027841Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 10:00:01 other-server systemd[1]: Stopping Puppet agent...
+Sep  4 10:00:01 other-server systemd[1]: Stopped Puppet agent.
+Sep  4 10:00:01 other-server systemd[1]: Started Puppet agent.
+Sep  4 10:01:02 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 10:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T07:18:06.029038688Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 10:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T07:20:28.779Z caller=db.go:557 level=info msg="series GC completed" duration=4.294998ms
+Sep  4 10:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T07:23:06.029054954Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 11:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 11:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T08:03:06.029044727Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 11:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T08:08:06.02899994Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 12:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T09:20:28.785Z caller=db.go:557 level=info msg="series GC completed" duration=5.553306ms
+Sep  4 12:20:28 other-server prometheus-agent[5232]: ts=2023-09-04T09:20:28.785Z caller=checkpoint.go:98 level=info msg="Creating checkpoint" from_segment=5619 to_segment=5620 mint=1693819227000
+Sep  4 12:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T09:20:29.004Z caller=db.go:628 level=info msg="WAL checkpoint complete" first=5619 last=5620 duration=224.516581ms
+Sep  4 12:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T09:23:06.029059753Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 12:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T09:58:06.029043669Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 13:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 13:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T10:03:06.029054343Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 13:49:54 other-server prometheus-agent[5232]: ts=2023-09-04T10:49:54.627Z caller=dedupe.go:112 component=remote level=warn remote_name=5ba695 url=https://prometheus.endpoint/remote/write msg="Failed to send batch, retrying" err="server returned HTTP status 502 Bad Gateway: "
+Sep  4 13:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T10:53:06.029062844Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 13:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T10:58:06.029042167Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 14:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 14:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T11:03:06.029034887Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 14:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T11:18:06.029007463Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 14:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T11:20:29.009Z caller=db.go:557 level=info msg="series GC completed" duration=4.616877ms
+Sep  4 14:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T11:23:06.028975615Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 14:28:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T11:28:06.029053773Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 14:29:53 other-server prometheus-agent[5232]: ts=2023-09-04T11:29:53.762Z caller=dedupe.go:112 component=remote level=warn remote_name=5ba695 url=https://prometheus.endpoint/remote/write msg="Failed to send batch, retrying" err="server returned HTTP status 502 Bad Gateway: "
+Sep  4 14:32:13 other-server prometheus-agent[5232]: ts=2023-09-04T11:32:13.546Z caller=dedupe.go:112 component=remote level=warn remote_name=5ba695 url=https://prometheus.endpoint/remote/write msg="Failed to send batch, retrying" err="server returned HTTP status 502 Bad Gateway: "
+Sep  4 14:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T11:58:06.029005876Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 15:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 15:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T12:58:06.028975976Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 16:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 16:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T13:18:06.029054863Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 16:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T13:20:29.015Z caller=db.go:557 level=info msg="series GC completed" duration=4.483008ms
+Sep  4 16:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T13:20:29.015Z caller=checkpoint.go:98 level=info msg="Creating checkpoint" from_segment=5621 to_segment=5622 mint=1693833627000
+Sep  4 16:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T13:20:29.252Z caller=db.go:628 level=info msg="WAL checkpoint complete" first=5621 last=5622 duration=242.065357ms
+Sep  4 16:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T13:23:06.02896851Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 17:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 17:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T14:03:06.028945828Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 17:17:45 other-server kernel: [38531575.807770] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 17:17:45 other-server kernel: [38531575.807775] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 17:17:45 other-server kernel: [38531575.807778] CPU: 10 PID: 9514 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 17:17:45 other-server kernel: [38531575.807779] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 17:17:45 other-server kernel: [38531575.807781] Call Trace:
+Sep  4 17:17:45 other-server kernel: [38531575.807789]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 17:17:45 other-server kernel: [38531575.807794]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 17:17:45 other-server kernel: [38531575.807799]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 17:17:45 other-server kernel: [38531575.807803]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 17:17:45 other-server kernel: [38531575.807806]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 17:17:45 other-server kernel: [38531575.807809]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 17:17:45 other-server kernel: [38531575.807812]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 17:17:45 other-server kernel: [38531575.807814]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 17:17:45 other-server kernel: [38531575.807816]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 17:17:45 other-server kernel: [38531575.807820]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 17:17:45 other-server kernel: [38531575.807822]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 17:17:45 other-server kernel: [38531575.807824]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 17:17:45 other-server kernel: [38531575.807827] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 17:17:45 other-server kernel: [38531575.807829] memory: usage 1048576kB, limit 1048576kB, failcnt 312939
+Sep  4 17:17:45 other-server kernel: [38531575.807830] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 17:17:45 other-server kernel: [38531575.807831] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 17:17:45 other-server kernel: [38531575.807832] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048456KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 17:17:45 other-server kernel: [38531575.807844] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 17:17:45 other-server kernel: [38531575.807923] [32525]    80 32525   280106    62537     460        0             0 node
+Sep  4 17:17:45 other-server kernel: [38531575.807948] [ 9514]    80  9514   292113    83355     565        0             0 node /opt/www/p
+Sep  4 17:17:45 other-server kernel: [38531575.807950] [23977]    80 23977   260355    43662     336        0             0 node /opt/www/p
+Sep  4 17:17:45 other-server kernel: [38531575.807952] [20188]    80 20188   255995    46928     322        0             0 node /opt/www/p
+Sep  4 17:17:45 other-server kernel: [38531575.807954] [27400]    80 27400   261516    45022     341        0             0 node /opt/www/p
+Sep  4 17:17:45 other-server kernel: [38531575.807989] Memory cgroup out of memory: Kill process 9524 (node /opt/www/p) score 320 or sacrifice child
+Sep  4 17:17:45 other-server kernel: [38531575.809341] Killed process 9514 (node /opt/www/p), UID 80, total-vm:1168452kB, anon-rss:317492kB, file-rss:15928kB, shmem-rss:0kB
+Sep  4 17:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T14:18:06.029109698Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 17:28:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T14:28:06.029015412Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 17:30:59 other-server systemd[1]: Starting Cleanup of Temporary Directories...
+Sep  4 17:30:59 other-server systemd[1]: Started Cleanup of Temporary Directories.
+Sep  4 17:33:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T14:33:06.029047007Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 18:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:03:06.029006871Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:04:18 other-server kernel: [38534369.324916] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 18:04:18 other-server kernel: [38534369.324921] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 18:04:18 other-server kernel: [38534369.324924] CPU: 16 PID: 25330 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 18:04:18 other-server kernel: [38534369.324926] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 18:04:18 other-server kernel: [38534369.324927] Call Trace:
+Sep  4 18:04:18 other-server kernel: [38534369.324934]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 18:04:18 other-server kernel: [38534369.324938]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 18:04:18 other-server kernel: [38534369.324942]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 18:04:18 other-server kernel: [38534369.324946]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 18:04:18 other-server kernel: [38534369.324949]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 18:04:18 other-server kernel: [38534369.324952]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 18:04:18 other-server kernel: [38534369.324955]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 18:04:18 other-server kernel: [38534369.324958]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 18:04:18 other-server kernel: [38534369.324960]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 18:04:18 other-server kernel: [38534369.324964]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 18:04:18 other-server kernel: [38534369.324966]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 18:04:18 other-server kernel: [38534369.324968]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 18:04:18 other-server kernel: [38534369.324979] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 18:04:18 other-server kernel: [38534369.324994] memory: usage 1048576kB, limit 1048576kB, failcnt 312987
+Sep  4 18:04:18 other-server kernel: [38534369.324996] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 18:04:18 other-server kernel: [38534369.324997] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 18:04:18 other-server kernel: [38534369.324998] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048376KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 18:04:18 other-server kernel: [38534369.325014] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 18:04:18 other-server kernel: [38534369.325099] [32525]    80 32525   280106    62506     460        0             0 node
+Sep  4 18:04:18 other-server kernel: [38534369.325124] [23977]    80 23977   266423    49781     394        0             0 node /opt/www/p
+Sep  4 18:04:18 other-server kernel: [38534369.325127] [20188]    80 20188   251899    43145     293        0             0 node /opt/www/p
+Sep  4 18:04:18 other-server kernel: [38534369.325129] [27400]    80 27400   266727    50231     386        0             0 node /opt/www/p
+Sep  4 18:04:18 other-server kernel: [38534369.325134] [25330]    80 25330   290073    75804     541        0             0 node /opt/www/p
+Sep  4 18:04:18 other-server kernel: [38534369.325171] Memory cgroup out of memory: Kill process 25347 (node /opt/www/p) score 291 or sacrifice child
+Sep  4 18:04:18 other-server kernel: [38534369.326767] Killed process 25330 (node /opt/www/p), UID 80, total-vm:1160292kB, anon-rss:287552kB, file-rss:15664kB, shmem-rss:0kB
+Sep  4 18:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:08:06.029027984Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:13:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:13:06.02902878Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:13:33 other-server sshd[25098]: error: Could not load host key: /etc/ssh/ssh_host_dsa_key
+Sep  4 18:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:18:06.029029454Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T15:20:29.260Z caller=db.go:557 level=info msg="series GC completed" duration=6.287126ms
+Sep  4 18:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:23:06.029048887Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:26:01 other-server kernel: [38535672.262497] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 18:26:01 other-server kernel: [38535672.262505] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 18:26:01 other-server kernel: [38535672.262510] CPU: 16 PID: 20188 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 18:26:01 other-server kernel: [38535672.262513] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 18:26:01 other-server kernel: [38535672.262515] Call Trace:
+Sep  4 18:26:01 other-server kernel: [38535672.262527]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 18:26:01 other-server kernel: [38535672.262533]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 18:26:01 other-server kernel: [38535672.262541]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 18:26:01 other-server kernel: [38535672.262548]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 18:26:01 other-server kernel: [38535672.262551]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 18:26:01 other-server kernel: [38535672.262554]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 18:26:01 other-server kernel: [38535672.262557]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 18:26:01 other-server kernel: [38535672.262560]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 18:26:01 other-server kernel: [38535672.262563]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 18:26:01 other-server kernel: [38535672.262569]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 18:26:01 other-server kernel: [38535672.262571]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 18:26:01 other-server kernel: [38535672.262574]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 18:26:01 other-server kernel: [38535672.262578] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 18:26:01 other-server kernel: [38535672.262581] memory: usage 1048576kB, limit 1048576kB, failcnt 313032
+Sep  4 18:26:01 other-server kernel: [38535672.262582] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 18:26:01 other-server kernel: [38535672.262583] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 18:26:01 other-server kernel: [38535672.262584] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048452KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 18:26:01 other-server kernel: [38535672.262599] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 18:26:01 other-server kernel: [38535672.262713] [32525]    80 32525   280106    62717     460        0             0 node
+Sep  4 18:26:01 other-server kernel: [38535672.262748] [23977]    80 23977   265655    56852     388        0             0 node /opt/www/p
+Sep  4 18:26:01 other-server kernel: [38535672.262750] [20188]    80 20188   255611    44729     322        0             0 node /opt/www/p
+Sep  4 18:26:01 other-server kernel: [38535672.262753] [27400]    80 27400   264793    48081     373        0             0 node /opt/www/p
+Sep  4 18:26:01 other-server kernel: [38535672.262782] [31193]    80 31193   278247    68844     471        0             0 node /opt/www/p
+Sep  4 18:26:01 other-server kernel: [38535672.262806] Memory cgroup out of memory: Kill process 31208 (node /opt/www/p) score 264 or sacrifice child
+Sep  4 18:26:01 other-server kernel: [38535672.264313] Killed process 31193 (node /opt/www/p), UID 80, total-vm:1112988kB, anon-rss:259688kB, file-rss:15688kB, shmem-rss:0kB
+Sep  4 18:28:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:28:06.029035912Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:33:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:33:06.029004245Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:38:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:38:06.029074771Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:42:26 other-server kernel: [38536656.911921] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 18:42:26 other-server kernel: [38536656.911925] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 18:42:26 other-server kernel: [38536656.911928] CPU: 1 PID: 27400 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 18:42:26 other-server kernel: [38536656.911929] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 18:42:26 other-server kernel: [38536656.911931] Call Trace:
+Sep  4 18:42:26 other-server kernel: [38536656.911936]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 18:42:26 other-server kernel: [38536656.911940]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 18:42:26 other-server kernel: [38536656.911944]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 18:42:26 other-server kernel: [38536656.911948]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 18:42:26 other-server kernel: [38536656.911950]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 18:42:26 other-server kernel: [38536656.911953]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 18:42:26 other-server kernel: [38536656.911955]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 18:42:26 other-server kernel: [38536656.911957]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 18:42:26 other-server kernel: [38536656.911959]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 18:42:26 other-server kernel: [38536656.911962]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 18:42:26 other-server kernel: [38536656.911964]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 18:42:26 other-server kernel: [38536656.911966]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 18:42:26 other-server kernel: [38536656.911968] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 18:42:26 other-server kernel: [38536656.911971] memory: usage 1048576kB, limit 1048576kB, failcnt 313133
+Sep  4 18:42:26 other-server kernel: [38536656.911972] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 18:42:26 other-server kernel: [38536656.911973] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 18:42:26 other-server kernel: [38536656.911974] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048348KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 18:42:26 other-server kernel: [38536656.911987] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 18:42:26 other-server kernel: [38536656.912094] [32525]    80 32525   280237    62632     462        0             0 node
+Sep  4 18:42:26 other-server kernel: [38536656.912118] [23977]    80 23977   265411    48843     387        0             0 node /opt/www/p
+Sep  4 18:42:26 other-server kernel: [38536656.912121] [20188]    80 20188   257787    47131     341        0             0 node /opt/www/p
+Sep  4 18:42:26 other-server kernel: [38536656.912126] [27400]    80 27400   300447    84719     513        0             0 node /opt/www/p
+Sep  4 18:42:26 other-server kernel: [38536656.912168] [31115]    80 31115   255632    38177     354        0             0 node /opt/www/p
+Sep  4 18:42:26 other-server kernel: [38536656.912179] Memory cgroup out of memory: Kill process 27410 (node /opt/www/p) score 325 or sacrifice child
+Sep  4 18:42:26 other-server kernel: [38536656.913512] Killed process 27400 (node /opt/www/p), UID 80, total-vm:1201788kB, anon-rss:322932kB, file-rss:15944kB, shmem-rss:0kB
+Sep  4 18:43:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:43:06.029049863Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:48:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:48:06.02903213Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:53:06.029001852Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 18:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T15:58:06.029059815Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 19:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 19:41:50 other-server kernel: [38540220.496659] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 19:41:50 other-server kernel: [38540220.496664] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 19:41:50 other-server kernel: [38540220.496667] CPU: 11 PID: 13434 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 19:41:50 other-server kernel: [38540220.496669] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 19:41:50 other-server kernel: [38540220.496670] Call Trace:
+Sep  4 19:41:50 other-server kernel: [38540220.496678]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 19:41:50 other-server kernel: [38540220.496683]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 19:41:50 other-server kernel: [38540220.496688]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 19:41:50 other-server kernel: [38540220.496692]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 19:41:50 other-server kernel: [38540220.496694]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 19:41:50 other-server kernel: [38540220.496697]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 19:41:50 other-server kernel: [38540220.496700]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 19:41:50 other-server kernel: [38540220.496702]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 19:41:50 other-server kernel: [38540220.496704]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 19:41:50 other-server kernel: [38540220.496708]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 19:41:50 other-server kernel: [38540220.496710]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 19:41:50 other-server kernel: [38540220.496712]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 19:41:50 other-server kernel: [38540220.496714] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 19:41:50 other-server kernel: [38540220.496717] memory: usage 1048576kB, limit 1048576kB, failcnt 313174
+Sep  4 19:41:50 other-server kernel: [38540220.496718] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 19:41:50 other-server kernel: [38540220.496719] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 19:41:50 other-server kernel: [38540220.496720] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048516KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 19:41:50 other-server kernel: [38540220.496733] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 19:41:50 other-server kernel: [38540220.496816] [32525]    80 32525   280237    62829     462        0             0 node
+Sep  4 19:41:50 other-server kernel: [38540220.496840] [23977]    80 23977   259734    43178     344        0             0 node /opt/www/p
+Sep  4 19:41:50 other-server kernel: [38540220.496842] [20188]    80 20188   256738    40225     335        0             0 node /opt/www/p
+Sep  4 19:41:50 other-server kernel: [38540220.496870] [31115]    80 31115   255866    45923     314        0             0 node /opt/www/p
+Sep  4 19:41:50 other-server kernel: [38540220.496872] [13434]    80 13434   306587    89408     525        0             0 node /opt/www/p
+Sep  4 19:41:50 other-server kernel: [38540220.496884] Memory cgroup out of memory: Kill process 13444 (node /opt/www/p) score 343 or sacrifice child
+Sep  4 19:41:50 other-server kernel: [38540220.498236] Killed process 13434 (node /opt/www/p), UID 80, total-vm:1226348kB, anon-rss:341728kB, file-rss:15904kB, shmem-rss:0kB
+Sep  4 19:43:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T16:43:06.029071073Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 20:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:03:06.028971707Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:07:24 other-server kernel: [38541754.587366] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 20:07:24 other-server kernel: [38541754.587371] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 20:07:24 other-server kernel: [38541754.587375] CPU: 6 PID: 26757 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 20:07:24 other-server kernel: [38541754.587376] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 20:07:24 other-server kernel: [38541754.587378] Call Trace:
+Sep  4 20:07:24 other-server kernel: [38541754.587386]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 20:07:24 other-server kernel: [38541754.587391]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 20:07:24 other-server kernel: [38541754.587396]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 20:07:24 other-server kernel: [38541754.587401]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 20:07:24 other-server kernel: [38541754.587403]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 20:07:24 other-server kernel: [38541754.587406]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 20:07:24 other-server kernel: [38541754.587409]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 20:07:24 other-server kernel: [38541754.587411]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 20:07:24 other-server kernel: [38541754.587413]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 20:07:24 other-server kernel: [38541754.587418]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 20:07:24 other-server kernel: [38541754.587420]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 20:07:24 other-server kernel: [38541754.587421]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 20:07:24 other-server kernel: [38541754.587425] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 20:07:24 other-server kernel: [38541754.587427] memory: usage 1048576kB, limit 1048576kB, failcnt 313241
+Sep  4 20:07:24 other-server kernel: [38541754.587428] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 20:07:24 other-server kernel: [38541754.587429] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 20:07:24 other-server kernel: [38541754.587430] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048440KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 20:07:24 other-server kernel: [38541754.587442] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 20:07:24 other-server kernel: [38541754.587520] [32525]    80 32525   280237    62860     462        0             0 node
+Sep  4 20:07:24 other-server kernel: [38541754.587543] [23977]    80 23977   258476    42149     334        0             0 node /opt/www/p
+Sep  4 20:07:24 other-server kernel: [38541754.587545] [20188]    80 20188   258274    41481     347        0             0 node /opt/www/p
+Sep  4 20:07:24 other-server kernel: [38541754.587568] [31115]    80 31115   257530    40360     327        0             0 node /opt/www/p
+Sep  4 20:07:24 other-server kernel: [38541754.587571] [26757]    80 26757   309610    94584     529        0             0 node /opt/www/p
+Sep  4 20:07:24 other-server kernel: [38541754.587585] Memory cgroup out of memory: Kill process 26770 (node /opt/www/p) score 362 or sacrifice child
+Sep  4 20:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:08:06.028987784Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:13:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:13:06.02906203Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:18:06.028988066Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T17:20:29.266Z caller=db.go:557 level=info msg="series GC completed" duration=5.850686ms
+Sep  4 20:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T17:20:29.267Z caller=checkpoint.go:98 level=info msg="Creating checkpoint" from_segment=5623 to_segment=5624 mint=1693848027000
+Sep  4 20:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T17:20:29.507Z caller=db.go:628 level=info msg="WAL checkpoint complete" first=5623 last=5624 duration=246.008962ms
+Sep  4 20:22:08 other-server kernel: [38542638.195143] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 20:22:08 other-server kernel: [38542638.195148] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 20:22:08 other-server kernel: [38542638.195151] CPU: 12 PID: 5213 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 20:22:08 other-server kernel: [38542638.195152] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 20:22:08 other-server kernel: [38542638.195153] Call Trace:
+Sep  4 20:22:08 other-server kernel: [38542638.195160]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 20:22:08 other-server kernel: [38542638.195163]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 20:22:08 other-server kernel: [38542638.195167]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 20:22:08 other-server kernel: [38542638.195171]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 20:22:08 other-server kernel: [38542638.195173]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 20:22:08 other-server kernel: [38542638.195176]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 20:22:08 other-server kernel: [38542638.195178]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 20:22:08 other-server kernel: [38542638.195180]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 20:22:08 other-server kernel: [38542638.195182]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 20:22:08 other-server kernel: [38542638.195185]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 20:22:08 other-server kernel: [38542638.195187]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 20:22:08 other-server kernel: [38542638.195189]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 20:22:08 other-server kernel: [38542638.195191] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 20:22:08 other-server kernel: [38542638.195193] memory: usage 1048576kB, limit 1048576kB, failcnt 313292
+Sep  4 20:22:08 other-server kernel: [38542638.195195] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 20:22:08 other-server kernel: [38542638.195196] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 20:22:08 other-server kernel: [38542638.195196] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048488KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 20:22:08 other-server kernel: [38542638.195209] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 20:22:08 other-server kernel: [38542638.195292] [32525]    80 32525   280237    62767     462        0             0 node
+Sep  4 20:22:08 other-server kernel: [38542638.195330] [23977]    80 23977   266344    49794     391        0             0 node /opt/www/p
+Sep  4 20:22:08 other-server kernel: [38542638.195336] [20188]    80 20188   257423    40439     346        0             0 node /opt/www/p
+Sep  4 20:22:08 other-server kernel: [38542638.195381] [31115]    80 31115   257813    41019     327        0             0 node /opt/www/p
+Sep  4 20:22:08 other-server kernel: [38542638.195388] [ 5213]    80  5213   300525    87450     520        0             0 node /opt/www/p
+Sep  4 20:22:08 other-server kernel: [38542638.195414] Memory cgroup out of memory: Kill process 5224 (node /opt/www/p) score 335 or sacrifice child
+Sep  4 20:22:08 other-server kernel: [38542638.197130] Killed process 5213 (node /opt/www/p), UID 80, total-vm:1202100kB, anon-rss:334100kB, file-rss:15700kB, shmem-rss:0kB
+Sep  4 20:23:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:23:06.029090841Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:28:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:28:06.029020667Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:33:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:33:06.029028317Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:38:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:38:06.029037079Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 20:38:42 other-server kernel: [38543632.243238] node /opt/www/p invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 20:38:42 other-server kernel: [38543632.243242] node /opt/www/p cpuset=/ mems_allowed=0-1
+Sep  4 20:38:42 other-server kernel: [38543632.243245] CPU: 4 PID: 14663 Comm: node /opt/www/p Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 20:38:42 other-server kernel: [38543632.243246] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 20:38:42 other-server kernel: [38543632.243247] Call Trace:
+Sep  4 20:38:42 other-server kernel: [38543632.243254]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 20:38:42 other-server kernel: [38543632.243257]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 20:38:42 other-server kernel: [38543632.243261]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 20:38:42 other-server kernel: [38543632.243264]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 20:38:42 other-server kernel: [38543632.243267]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 20:38:42 other-server kernel: [38543632.243269]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 20:38:42 other-server kernel: [38543632.243272]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 20:38:42 other-server kernel: [38543632.243274]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 20:38:42 other-server kernel: [38543632.243276]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 20:38:42 other-server kernel: [38543632.243279]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 20:38:42 other-server kernel: [38543632.243281]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 20:38:42 other-server kernel: [38543632.243283]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 20:38:42 other-server kernel: [38543632.243285] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 20:38:42 other-server kernel: [38543632.243287] memory: usage 1048576kB, limit 1048576kB, failcnt 313362
+Sep  4 20:38:42 other-server kernel: [38543632.243288] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 20:38:42 other-server kernel: [38543632.243289] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 20:38:42 other-server kernel: [38543632.243290] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048360KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 20:38:42 other-server kernel: [38543632.243302] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 20:38:42 other-server kernel: [38543632.243378] [32525]    80 32525   280237    62727     462        0             0 node
+Sep  4 20:38:42 other-server kernel: [38543632.243400] [23977]    80 23977   266856    50270     395        0             0 node /opt/www/p
+Sep  4 20:38:42 other-server kernel: [38543632.243402] [20188]    80 20188   250139    32943     282        0             0 node /opt/www/p
+Sep  4 20:38:42 other-server kernel: [38543632.243433] [31115]    80 31115   255631    38883     314        0             0 node /opt/www/p
+Sep  4 20:38:42 other-server kernel: [38543632.243436] [14663]    80 14663   311490    96720     516        0             0 node /opt/www/p
+Sep  4 20:38:42 other-server kernel: [38543632.243448] Memory cgroup out of memory: Kill process 14673 (node /opt/www/p) score 370 or sacrifice child
+Sep  4 20:38:42 other-server kernel: [38543632.244751] Killed process 14663 (node /opt/www/p), UID 80, total-vm:1245960kB, anon-rss:371180kB, file-rss:15700kB, shmem-rss:0kB
+Sep  4 20:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T17:58:06.029007494Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 21:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 21:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T18:03:06.028990067Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  4 22:03:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:03:06.029062706Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:08:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:08:06.029027121Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:12:03 other-server kernel: [38549232.481378] node invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 22:12:03 other-server kernel: [38549232.481382] node cpuset=/ mems_allowed=0-1
+Sep  4 22:12:03 other-server kernel: [38549232.481385] CPU: 14 PID: 32525 Comm: node Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 22:12:03 other-server kernel: [38549232.481387] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 22:12:03 other-server kernel: [38549232.481388] Call Trace:
+Sep  4 22:12:03 other-server kernel: [38549232.481395]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 22:12:03 other-server kernel: [38549232.481398]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 22:12:03 other-server kernel: [38549232.481403]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 22:12:03 other-server kernel: [38549232.481407]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 22:12:03 other-server kernel: [38549232.481409]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 22:12:03 other-server kernel: [38549232.481412]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 22:12:03 other-server kernel: [38549232.481415]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 22:12:03 other-server kernel: [38549232.481417]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 22:12:03 other-server kernel: [38549232.481420]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 22:12:03 other-server kernel: [38549232.481423]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 22:12:03 other-server kernel: [38549232.481425]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 22:12:03 other-server kernel: [38549232.481427]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 22:12:03 other-server kernel: [38549232.481430] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 22:12:03 other-server kernel: [38549232.481432] memory: usage 1048576kB, limit 1048576kB, failcnt 313399
+Sep  4 22:12:03 other-server kernel: [38549232.481433] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 22:12:03 other-server kernel: [38549232.481435] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 22:12:03 other-server kernel: [38549232.481436] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048424KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 22:12:03 other-server kernel: [38549232.481448] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 22:12:03 other-server kernel: [38549232.481570] [32525]    80 32525   282794    68403     482        0             0 node
+Sep  4 22:12:03 other-server kernel: [38549232.481594] [23977]    80 23977   310573    98183     547        0             0 node /opt/www/p
+Sep  4 22:12:03 other-server kernel: [38549232.481597] [20188]    80 20188   259253    42456     353        0             0 node /opt/www/p
+Sep  4 22:12:03 other-server kernel: [38549232.481605] [31115]    80 31115   257832    41010     327        0             0 node /opt/www/p
+Sep  4 22:12:03 other-server kernel: [38549232.481608] [30552]    80 30552   248867    31423     259        0             0 node /opt/www/p
+Sep  4 22:12:03 other-server kernel: [38549232.481651] Memory cgroup out of memory: Kill process 23987 (node /opt/www/p) score 376 or sacrifice child
+Sep  4 22:12:03 other-server kernel: [38549232.483212] Killed process 23977 (node /opt/www/p), UID 80, total-vm:1242292kB, anon-rss:376784kB, file-rss:15948kB, shmem-rss:0kB
+Sep  4 22:13:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:13:06.029026981Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:18:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:18:06.028984355Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:20:29 other-server prometheus-agent[5232]: ts=2023-09-04T19:20:29.513Z caller=db.go:557 level=info msg="series GC completed" duration=5.604998ms
+Sep  4 22:44:37 other-server kernel: [38551186.896362] node invoked oom-killer: gfp_mask=0xd0, order=0, oom_score_adj=0
+Sep  4 22:44:37 other-server kernel: [38551186.896366] node cpuset=/ mems_allowed=0-1
+Sep  4 22:44:37 other-server kernel: [38551186.896369] CPU: 3 PID: 32525 Comm: node Not tainted 3.10.0-0.0.0.el7.x86_64 #1
+Sep  4 22:44:37 other-server kernel: [38551186.896371] Hardware name: Lovely Server/A0B-C1 Series, BIOS 1234 01/01/2001
+Sep  4 22:44:37 other-server kernel: [38551186.896372] Call Trace:
+Sep  4 22:44:37 other-server kernel: [38551186.896379]  [<ffffffff98783579>] dump_stack+0x19/0x1b
+Sep  4 22:44:37 other-server kernel: [38551186.896383]  [<ffffffff9877e618>] dump_header+0x90/0x229
+Sep  4 22:44:37 other-server kernel: [38551186.896388]  [<ffffffff981c1fe6>] ? find_lock_task_mm+0x56/0xc0
+Sep  4 22:44:37 other-server kernel: [38551186.896392]  [<ffffffff9823d2d8>] ? try_get_mem_cgroup_from_mm+0x28/0x60
+Sep  4 22:44:37 other-server kernel: [38551186.896395]  [<ffffffff981c254d>] oom_kill_process+0x2cd/0x490
+Sep  4 22:44:37 other-server kernel: [38551186.896398]  [<ffffffff982416cc>] mem_cgroup_oom_synchronize+0x55c/0x590
+Sep  4 22:44:37 other-server kernel: [38551186.896401]  [<ffffffff98240b30>] ? mem_cgroup_charge_common+0xc0/0xc0
+Sep  4 22:44:37 other-server kernel: [38551186.896404]  [<ffffffff981c2e34>] pagefault_out_of_memory+0x14/0x90
+Sep  4 22:44:37 other-server kernel: [38551186.896406]  [<ffffffff9877cb55>] mm_fault_error+0x6a/0x157
+Sep  4 22:44:37 other-server kernel: [38551186.896410]  [<ffffffff987908d1>] __do_page_fault+0x491/0x500
+Sep  4 22:44:37 other-server kernel: [38551186.896412]  [<ffffffff98790975>] do_page_fault+0x35/0x90
+Sep  4 22:44:37 other-server kernel: [38551186.896414]  [<ffffffff9878c778>] page_fault+0x28/0x30
+Sep  4 22:44:37 other-server kernel: [38551186.896417] Task in /system.slice/node-app.service killed as a result of limit of /system.slice/node-app.service
+Sep  4 22:44:37 other-server kernel: [38551186.896420] memory: usage 1048576kB, limit 1048576kB, failcnt 313447
+Sep  4 22:44:37 other-server kernel: [38551186.896421] memory+swap: usage 1048576kB, limit 9007199254740988kB, failcnt 0
+Sep  4 22:44:37 other-server kernel: [38551186.896422] kmem: usage 0kB, limit 9007199254740988kB, failcnt 0
+Sep  4 22:44:37 other-server kernel: [38551186.896423] Memory cgroup stats for /system.slice/node-app.service: cache:0KB rss:1048576KB rss_huge:0KB mapped_file:0KB swap:0KB inactive_anon:0KB active_anon:1048528KB inactive_file:0KB active_file:0KB unevictable:0KB
+Sep  4 22:44:37 other-server kernel: [38551186.896437] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+Sep  4 22:44:37 other-server kernel: [38551186.896515] [32525]    80 32525   290592    75733     500        0             0 node
+Sep  4 22:44:37 other-server kernel: [38551186.896539] [20188]    80 20188   257358    40690     349        0             0 node /opt/www/p
+Sep  4 22:44:37 other-server kernel: [38551186.896548] [31115]    80 31115   257909    40896     328        0             0 node /opt/www/p
+Sep  4 22:44:37 other-server kernel: [38551186.896550] [30552]    80 30552   248867    31592     259        0             0 node /opt/www/p
+Sep  4 22:44:37 other-server kernel: [38551186.896576] [10917]    80 10917   301834    92632     521        0             0 node /opt/www/p
+Sep  4 22:44:37 other-server kernel: [38551186.896591] Memory cgroup out of memory: Kill process 10959 (node /opt/www/p) score 355 or sacrifice child
+Sep  4 22:44:37 other-server kernel: [38551186.898180] Killed process 10917 (node /opt/www/p), UID 80, total-vm:1207336kB, anon-rss:354832kB, file-rss:15696kB, shmem-rss:0kB
+Sep  4 22:48:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:48:06.028968331Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:53:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:53:06.029057097Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 22:58:06 other-server elasticsearch_exporter[2426]: level=info ts=2023-09-04T19:58:06.029055424Z caller=clusterinfo.go:169 msg="providing consumers with updated cluster info label"
+Sep  4 23:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  5 00:00:01 other-server systemd[1]: Stopping Atop advanced performance monitor...
+Sep  5 00:00:01 other-server systemd[1]: Stopping System Logger Daemon...
+Sep  5 00:00:01 other-server systemd[1]: Stopped System Logger Daemon.
+Sep  5 00:00:01 other-server systemd[1]: Starting System Logger Daemon...
+Sep  5 00:00:02 other-server systemd[1]: Stopped Atop advanced performance monitor.
+Sep  5 00:00:02 other-server systemd[1]: Starting Atop advanced performance monitor...
+Sep  5 00:00:02 other-server systemd[1]: Started Atop advanced performance monitor.
+Sep  5 00:00:02 other-server systemd[1]: Started System Logger Daemon.
+Sep  5 00:01:01 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  5 00:01:03 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep  5 00:01:07 other-server rsyslogd: [origin software="rsyslogd" swVersion="1.2.3" x-pid="5885" x-info="http://www.rsyslog.com"] rsyslogd was HUPed

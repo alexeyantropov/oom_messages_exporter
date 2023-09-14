@@ -3,7 +3,7 @@ import os
 from typing import TypedDict
 
 def log_exception(where, err):
-    logging.critical('An error occured in "{}", exception:\n---\n{}\n---'.format(where, err))
+    logging.critical('An error occurred in "{}", exception:\n---\n{}\n---'.format(where, err))
 
 class FileStat(TypedDict):
     inode: int
@@ -40,7 +40,7 @@ class FileTailer:
 
         """
         The method opens a file and moves a pointer to the last line.
-        Also the methos stores info about the opened file thought a call of the '__update_file_stat' method.
+        Also the method stores info about the opened file thought a call of the '__update_file_stat' method.
         """
 
         self.__update_file_stat()
@@ -83,7 +83,7 @@ class FileTailer:
     def __update_file_stat(self) -> None:
 
         """
-        This methods stores and updates info avout the given file in the 'file_stats' variable.
+        This methods stores and updates info about the given file in the 'file_stats' variable.
         """
 
         self.file_stats = self.__get_stat()

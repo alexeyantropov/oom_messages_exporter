@@ -1,0 +1,779 @@
+Sep  3 00:14:44 some-kube-node1 kernel: [34233016.051405] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 02:24:44 some-kube-node1 kernel: [34240815.408617] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 04:44:44 some-kube-node1 kernel: [34249214.901362] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386887] framework invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386893] CPU: 32 PID: 2920653 Comm: framework Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386895] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386896] Call Trace:
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386900]  dump_stack+0x41/0x60
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386905]  dump_header+0x4a/0x1db
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386909]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386912]  out_of_memory+0x1bd/0x4e0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386914]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386917]  try_charge+0x62e/0x660
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386920]  ? __alloc_pages_nodemask+0x166/0x310
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386923]  __mem_cgroup_charge+0x39/0xa0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386925]  mem_cgroup_charge+0x2f/0x90
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386927]  do_anonymous_page+0x94/0x300
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386930]  __handle_mm_fault+0x7a6/0x7e0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386932]  handle_mm_fault+0xc1/0x1e0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386934]  do_user_addr_fault+0x1b5/0x440
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386938]  do_page_fault+0x37/0x130
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386940]  ? page_fault+0x8/0x30
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386942]  page_fault+0x1e/0x30
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386944] RIP: 0033:0x7fc9a53778be
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386946] Code: 08 03 00 00 48 29 ea 31 c9 4c 39 fb 0f 95 c1 48 8d 34 28 48 83 cd 01 48 c1 e1 02 48 83 ca 01 48 09 cd 48 89 73 58 48 89 68 08 <48> 89 56 08 48 83 c0 10 48 83 c4 58 5b 5d 41 5c 41 5d 41 5e 41 5f
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386948] RSP: 002b:00007ffe395e5b10 EFLAGS: 00010202
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386950] RAX: 000000000654afe0 RBX: 00007fc9a56bd760 RCX: 0000000000000000
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386951] RDX: 0000000000020fc1 RSI: 000000000654b040 RDI: 000000000656c000
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386952] RBP: 0000000000000061 R08: 000000000654b000 R09: 0000000000000058
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386953] R10: 0000000000021000 R11: fffffffffffff000 R12: 000000000654afe0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386954] R13: 0000000000021021 R14: 0000000000000fff R15: 00007fc9a56bd760
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386956] memory: usage 1536000kB, limit 1536000kB, failcnt 3235
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386957] memory+swap: usage 1536000kB, limit 9007199254740988kB, failcnt 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386958] kmem: usage 198328kB, limit 9007199254740988kB, failcnt 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.386959] Memory cgroup stats for /kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd:
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] anon 1357508608
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] file 40960
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] kernel_stack 2899968
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] pagetables 13590528
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] percpu 1019904
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] sock 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] shmem 40960
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] file_mapped 4096
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] file_dirty 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] file_writeback 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] swapcached 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] anon_thp 268435456
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] file_thp 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] shmem_thp 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] inactive_anon 1368444928
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] active_anon 249856
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] inactive_file 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] active_file 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] unevictable 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] slab_reclaimable 178584976
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] slab_unreclaimable 5768880
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] slab 184353856
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] workingset_refault_anon 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] workingset_refault_file 1916
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] workingset_activate_anon 0
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387088] workingset_activate_file 13
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387091] Tasks state (memory values in pages):
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387092] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387094] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387097] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387100] [3967202]     0 3967202     6711      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387102] [3967213]  5000 3967213   262768     6815   180224        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387104] [3967383]  5000 3967383   184159    51662   942080        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387106] [2920462]     0 2920462     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387108] [2920463]     0 2920463     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387109] [2920464]     0 2920464     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387112] [2920465]     0 2920465     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387113] [2920466]     0 2920466     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387115] [2920467]     0 2920467     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387117] [2920468]     0 2920468     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387119] [2920469]  5000 2920469   227727     4276   172032        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387121] [2920470]     0 2920470     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387122] [2920472]  5000 2920472   227311     4035   159744        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387124] [2920473]     0 2920473     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387126] [2920474]  5000 2920474   227247     4152   167936        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387127] [2920475]     0 2920475     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387129] [2920477]  5000 2920477   227599     4032   163840        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387131] [2920478]  5000 2920478   227247     4549   163840        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387132] [2920479]     0 2920479     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387134] [2920481]  5000 2920481   243759     4198   159744        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387136] [2920482]     0 2920482     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387138] [2920483]  5000 2920483   243759     4158   163840        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387139] [2920484]     0 2920484     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387141] [2920485]  5000 2920485   211215     4526   163840        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387143] [2920486]  5000 2920486   227311     4060   159744        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387145] [2920487]     0 2920487     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387147] [2920488]  5000 2920488   227599     4570   167936        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387148] [2920489]     0 2920489     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387150] [2920490]     0 2920490     6710      675    90112        0           999 crond
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387152] [2920491]  5000 2920491   243983     4017   167936        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387154] [2920492]  5000 2920492   243631     4058   159744        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387156] [2920493]  5000 2920493   227247     4035   163840        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387157] [2920494]  5000 2920494   227247     5053   159744        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387159] [2920495]  5000 2920495   243983     4061   172032        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387163] [2920496]  5000 2920496   243759     4173   172032        0           999 locker
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387164] [2920641]  5000 2920641    36920     9047   327680        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387166] [2920642]  5000 2920642    36339     8372   323584        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387168] [2920643]  5000 2920643   162760    30097   774144        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387169] [2920644]  5000 2920644    36946     9053   327680        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387171] [2920645]  5000 2920645   162424    29842   765952        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387173] [2920646]  5000 2920646    36889     8700   323584        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387175] [2920647]  5000 2920647   163250    30717   778240        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387177] [2920648]  5000 2920648    36496     8666   335872        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387178] [2920649]  5000 2920649   161117    28983   761856        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387180] [2920650]  5000 2920650    35544     8112   319488        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387182] [2920651]  5000 2920651   163387    30807   778240        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387184] [2920652]  5000 2920652    36945     8951   335872        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387185] [2920654]  5000 2920654    36933     9003   331776        0           999 python
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387187] [2920653]  5000 2920653   162628    29943   757760        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387189] [2920655]  5000 2920655   158990    26941   741376        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387191] [2920656]  5000 2920656   162294    29700   765952        0           999 framework
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387192] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,mems_allowed=0,oom_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd,task_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd/2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,task=framework,pid=3967383,uid=5000
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387210] Memory cgroup out of memory: Killed process 3967383 (framework) total-vm:736636kB, anon-rss:185936kB, file-rss:20704kB, shmem-rss:8kB, UID:5000 pgtables:920kB oom_score_adj:999
+Sep  3 05:00:04 some-kube-node1 kernel: [34250135.390494] oom_reaper: reaped process 3967383 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:8kB
+Sep  3 05:04:44 some-kube-node1 kernel: [34250414.760271] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 08:54:44 some-kube-node1 kernel: [34264213.776858] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070034] framework invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070040] CPU: 62 PID: 1560851 Comm: framework Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070043] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070045] Call Trace:
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070048]  dump_stack+0x41/0x60
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070054]  dump_header+0x4a/0x1db
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070058]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070060]  out_of_memory+0x1bd/0x4e0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070063]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070066]  try_charge+0x62e/0x660
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070069]  ? __alloc_pages_nodemask+0x166/0x310
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070072]  __mem_cgroup_charge+0x39/0xa0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070074]  mem_cgroup_charge+0x2f/0x90
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070076]  do_anonymous_page+0x94/0x300
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070079]  __handle_mm_fault+0x7a6/0x7e0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070081]  handle_mm_fault+0xc1/0x1e0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070083]  do_user_addr_fault+0x1b5/0x440
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070087]  do_page_fault+0x37/0x130
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070089]  ? page_fault+0x8/0x30
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070091]  page_fault+0x1e/0x30
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070093] RIP: 0033:0x7f958b2819c5
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070096] Code: 8d 34 32 4d 89 e1 48 39 cd 48 89 75 58 0f 95 c1 49 83 ce 01 48 83 c8 01 0f b6 c9 48 c1 e1 02 49 09 ce 48 8d 4a 10 4c 89 72 08 <48> 89 46 08 8b 05 51 71 34 00 85 c0 0f 84 5f fa ff ff eb 9f 0f 1f
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070098] RSP: 002b:00007fff30bab750 EFLAGS: 00010206
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070100] RAX: 0000000000017fe1 RBX: 00007f958b5c67b8 RCX: 00000000077a2ff0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070101] RDX: 00000000077a2fe0 RSI: 00000000077a3020 RDI: 0000000000000000
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070102] RBP: 00007f958b5c6760 R08: 0000000000000002 R09: 0000000000000038
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070103] R10: 0000000000000004 R11: 0000000007785f6a R12: 0000000000000038
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070104] R13: 0000000000002710 R14: 0000000000000041 R15: 00007f958b5c67b8
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070106] memory: usage 1536000kB, limit 1536000kB, failcnt 3550
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070107] memory+swap: usage 1536000kB, limit 9007199254740988kB, failcnt 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070109] kmem: usage 222788kB, limit 9007199254740988kB, failcnt 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070110] Memory cgroup stats for /kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd:
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] anon 1340538880
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] file 40960
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] kernel_stack 2818048
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] pagetables 13684736
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] percpu 1019904
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] sock 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] shmem 40960
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] file_mapped 4096
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] file_dirty 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] file_writeback 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] swapcached 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] anon_thp 109051904
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] file_thp 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] shmem_thp 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] inactive_anon 1344049152
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] active_anon 249856
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] inactive_file 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] active_file 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] unevictable 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] slab_reclaimable 203469424
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] slab_unreclaimable 6005312
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] slab 209474736
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] workingset_refault_anon 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] workingset_refault_file 2066
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] workingset_activate_anon 0
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070529] workingset_activate_file 14
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070532] Tasks state (memory values in pages):
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070533] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070534] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070538] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070540] [1560655]     0 1560655     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070542] [1560656]     0 1560656     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070544] [1560657]     0 1560657     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070546] [1560658]     0 1560658     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070548] [1560659]     0 1560659     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070550] [1560660]     0 1560660     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070551] [1560661]     0 1560661     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070553] [1560662]     0 1560662     6710      674    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070555] [1560663]  5000 1560663   227663     4668   163840        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070557] [1560664]  5000 1560664   244111     4768   172032        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070559] [1560665]     0 1560665     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070560] [1560666]  5000 1560666   243983     4022   167936        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070562] [1560667]  5000 1560667   227599     4032   151552        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070564] [1560668]     0 1560668     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070566] [1560669]  5000 1560669   227247     3639   155648        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070567] [1560670]     0 1560670     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070569] [1560671]  5000 1560671   243695     4713   172032        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070571] [1560672]  5000 1560672   243695     4040   172032        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070573] [1560673]     0 1560673     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070574] [1560674]  5000 1560674   243983     3520   167936        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070576] [1560675]  5000 1560675   227311     3525   167936        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070578] [1560676]     0 1560676     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070580] [1560677]  5000 1560677   227663     4205   167936        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070581] [1560678]  5000 1560678   243919     4547   172032        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070583] [1560679]     0 1560679     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070585] [1560680]     0 1560680     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070586] [1560681]     0 1560681     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070588] [1560682]     0 1560682     6710      675    90112        0           999 crond
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070590] [1560683]  5000 1560683   244047     3529   176128        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070591] [1560684]  5000 1560684   227247     4547   163840        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070593] [1560685]  5000 1560685   227663     3722   167936        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070595] [1560686]  5000 1560686   243631     4014   159744        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070597] [1560687]  5000 1560687   243983     4014   172032        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070602] [1560689]  5000 1560689   227247     4568   163840        0           999 locker
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070604] [1560838]  5000 1560838   164181    31649   786432        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070606] [1560839]  5000 1560839    37013     9100   327680        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070608] [1560840]  5000 1560840   164577    31959   786432        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070609] [1560841]  5000 1560841    39074     9640   339968        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070611] [1560842]  5000 1560842   164346    31665   794624        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070612] [1560843]  5000 1560843    37045     9167   339968        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070614] [1560844]  5000 1560844   164445    31904   790528        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070616] [1560845]  5000 1560845   164181    31620   774144        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070618] [1560846]  5000 1560846    37015     9056   331776        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070619] [1560847]  5000 1560847    36932     9015   335872        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070621] [1560848]  5000 1560848    36940     9035   335872        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070623] [1560849]  5000 1560849    37043     9120   344064        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070625] [1560850]  5000 1560850   165522    32927   798720        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070626] [1560851]  5000 1560851   164775    32221   790528        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070628] [1560852]  5000 1560852   163818    31319   782336        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070630] [1560853]  5000 1560853   163884    31291   782336        0           999 framework
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070631] [1560854]  5000 1560854    36939     9030   335872        0           999 python
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070633] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,mems_allowed=0,oom_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd,task_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd/2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,task=framework,pid=1560850,uid=5000
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070644] Memory cgroup out of memory: Killed process 1560850 (framework) total-vm:662088kB, anon-rss:111112kB, file-rss:20588kB, shmem-rss:8kB, UID:5000 pgtables:780kB oom_score_adj:999
+Sep  3 09:00:04 some-kube-node1 kernel: [34264534.079120] oom_reaper: reaped process 1560850 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:8kB
+Sep  3 09:04:44 some-kube-node1 kernel: [34264813.792720] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 09:14:44 some-kube-node1 kernel: [34265413.716970] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 09:24:44 some-kube-node1 kernel: [34266013.656207] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 09:34:44 some-kube-node1 kernel: [34266613.635192] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 09:44:44 some-kube-node1 kernel: [34267213.621757] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 09:54:44 some-kube-node1 kernel: [34267813.541155] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408682] python invoked oom-killer: gfp_mask=0x6080c0(GFP_KERNEL|__GFP_ZERO), order=0, oom_score_adj=999
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408688] CPU: 13 PID: 3319091 Comm: python Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408690] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408691] Call Trace:
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408695]  dump_stack+0x41/0x60
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408700]  dump_header+0x4a/0x1db
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408705]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408707]  out_of_memory+0x1bd/0x4e0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408709]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408713]  try_charge+0x62e/0x660
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408716]  ? security_inode_getsecurity+0x49/0x70
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408719]  obj_cgroup_charge_pages+0x3f/0x100
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408721]  ? __alloc_file+0x2a/0xe0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408724]  obj_cgroup_charge+0x71/0x100
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408726]  kmem_cache_alloc+0x81/0x280
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408728]  __alloc_file+0x2a/0xe0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408730]  alloc_empty_file+0x43/0xc0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408732]  path_openat+0x53/0x14f0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408735]  ? bpf_lsm_inode_setattr+0x10/0x10
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408738]  ? security_inode_getattr+0x30/0x50
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408739]  ? vfs_getattr+0x1c/0x40
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408742]  ? ext4_getattr+0x68/0x90 [ext4]
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408764]  ? ovl_getattr+0x13d/0x380 [overlay]
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408770]  ? getname_flags+0x4a/0x1e0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408772]  ? __check_object_size+0xa8/0x16b
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408774]  ? path_get+0x11/0x30
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408775]  do_filp_open+0x93/0x100
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408777]  ? cp_new_stat+0x150/0x180
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408780]  ? getname_flags+0x4a/0x1e0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408781]  ? __check_object_size+0xa8/0x16b
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408783]  ? path_get+0x11/0x30
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408785]  do_sys_open+0x184/0x220
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408787]  do_syscall_64+0x5b/0x1a0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408791]  entry_SYSCALL_64_after_hwframe+0x65/0xca
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408794] RIP: 0033:0x7f167a7c69c0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408796] Code: 74 0b 31 c0 48 83 c4 08 e9 4d ff ff ff 48 8d 3d 26 c5 09 00 e8 c1 8d 02 00 90 41 89 ca 48 63 d2 48 63 ff b8 01 01 00 00 0f 05 <48> 3d 00 f0 ff ff 77 02 f3 c3 48 8b 15 7f 74 2d 00 f7 d8 64 89 02
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408798] RSP: 002b:00007ffdffda88b8 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408800] RAX: ffffffffffffffda RBX: 00007f1672fd1210 RCX: 00007f167a7c69c0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408802] RDX: 0000000000090800 RSI: 00007f1672fd1210 RDI: ffffffffffffff9c
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408803] RBP: 00007f167ba6cd80 R08: 0000000000000000 R09: 00007ffdffda88e0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408804] R10: 0000000000000000 R11: 0000000000000246 R12: 00007f167bb056b0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408805] R13: 0000000000ccdbb0 R14: 0000000000000001 R15: 0000000000000000
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408806] memory: usage 1536000kB, limit 1536000kB, failcnt 3702
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408808] memory+swap: usage 1536000kB, limit 9007199254740988kB, failcnt 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408809] kmem: usage 302940kB, limit 9007199254740988kB, failcnt 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.408810] Memory cgroup stats for /kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd:
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] anon 1258184704
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] file 40960
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] kernel_stack 2850816
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] pagetables 13172736
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] percpu 1019904
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] sock 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] shmem 40960
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] file_mapped 4096
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] file_dirty 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] file_writeback 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] swapcached 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] anon_thp 117440512
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] file_thp 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] shmem_thp 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] inactive_anon 1261703168
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] active_anon 245760
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] inactive_file 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] active_file 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] unevictable 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] slab_reclaimable 286276160
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] slab_unreclaimable 5696136
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] slab 291972296
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] workingset_refault_anon 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] workingset_refault_file 2138
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] workingset_activate_anon 0
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409117] workingset_activate_file 14
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409121] Tasks state (memory values in pages):
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409122] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409124] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409129] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409132] [3318922]     0 3318922     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409135] [3318923]     0 3318923     6710      674    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409138] [3318924]     0 3318924     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409141] [3318925]     0 3318925     6710      674    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409143] [3318926]     0 3318926     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409145] [3318927]     0 3318927     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409147] [3318928]     0 3318928     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409149] [3318929]     0 3318929     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409151] [3318930]  5000 3318930   227247     3848   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409154] [3318931]     0 3318931     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409156] [3318932]     0 3318932     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409158] [3318933]  5000 3318933   227311     4013   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409160] [3318934]  5000 3318934   227727     4247   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409162] [3318935]  5000 3318935   227311     4033   159744        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409164] [3318936]     0 3318936     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409166] [3318937]  5000 3318937   227247     3882   151552        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409168] [3318938]     0 3318938     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409170] [3318939]  5000 3318939   227247     4059   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409172] [3318940]     0 3318940     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409174] [3318941]  5000 3318941   227247     4554   159744        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409176] [3318942]  5000 3318942   227727     4200   159744        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409178] [3318943]     0 3318943     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409180] [3318944]  5000 3318944   227599     5664   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409182] [3318945]     0 3318945     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409184] [3318946]  5000 3318946   262128     4527   176128        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409186] [3318947]     0 3318947     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409188] [3318948]  5000 3318948   246096     4019   172032        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409190] [3318949]  5000 3318949   227663     4547   172032        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409192] [3318950]     0 3318950     6710      675    90112        0           999 crond
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409194] [3318951]  5000 3318951   227727     4203   167936        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409196] [3318952]  5000 3318952   243983     4526   172032        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409198] [3318953]  5000 3318953   227663     3516   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409200] [3318954]  5000 3318954   227247     4030   163840        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409205] [3318955]  5000 3318955   227247     3544   155648        0           999 locker
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409207] [3319083]  5000 3319083    36933     9009   327680        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409209] [3319084]  5000 3319084    38896     9408   352256        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409211] [3319085]  5000 3319085    37003     9072   339968        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409213] [3319086]  5000 3319086   163818    31246   794624        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409215] [3319087]  5000 3319087    37236     9248   327680        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409217] [3319088]  5000 3319088   163818    31217   782336        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409219] [3319089]  5000 3319089    37043     9166   335872        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409222] [3319090]  5000 3319090   164643    32071   794624        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409224] [3319091]  5000 3319091    37044     9118   339968        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409226] [3319092]  5000 3319092    37043     9113   335872        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409228] [3319120]  5000 3319120   163481    30850   782336        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409230] [3319121]  5000 3319121   163818    31236   786432        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409232] [3319122]  5000 3319122   164346    31752   786432        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409234] [3319123]  5000 3319123   164280    31719   778240        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409236] [3319124]  5000 3319124    37041     9123   327680        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409238] [3319125]  5000 3319125   164709    32125   782336        0           999 framework
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409240] [3319126]  5000 3319126    36867     8905   331776        0           999 python
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409242] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,mems_allowed=0,oom_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd,task_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd/2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,task=framework,pid=3319125,uid=5000
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.409254] Memory cgroup out of memory: Killed process 3319125 (framework) total-vm:658836kB, anon-rss:107972kB, file-rss:20524kB, shmem-rss:4kB, UID:5000 pgtables:764kB oom_score_adj:999
+Sep  3 10:00:05 some-kube-node1 kernel: [34268134.415692] oom_reaper: reaped process 3319125 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:4kB
+Sep  3 10:04:44 some-kube-node1 kernel: [34268413.516673] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 10:44:44 some-kube-node1 kernel: [34270813.315165] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 10:54:44 some-kube-node1 kernel: [34271413.268630] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438843] framework invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438849] CPU: 60 PID: 883107 Comm: framework Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438851] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438852] Call Trace:
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438856]  dump_stack+0x41/0x60
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438861]  dump_header+0x4a/0x1db
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438865]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438867]  out_of_memory+0x1bd/0x4e0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438870]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438873]  try_charge+0x62e/0x660
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438876]  ? __alloc_pages_nodemask+0x166/0x310
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438880]  __mem_cgroup_charge+0x39/0xa0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438882]  mem_cgroup_charge+0x2f/0x90
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438884]  do_anonymous_page+0x94/0x300
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438887]  __handle_mm_fault+0x7a6/0x7e0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438890]  ? ovl_read_iter+0x180/0x1b0 [overlay]
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438898]  handle_mm_fault+0xc1/0x1e0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438899]  do_user_addr_fault+0x1b5/0x440
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438903]  do_page_fault+0x37/0x130
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438905]  ? page_fault+0x8/0x30
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438908]  page_fault+0x1e/0x30
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438910] RIP: 0033:0x7f58b9cb79c5
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438912] Code: 8d 34 32 4d 89 e1 48 39 cd 48 89 75 58 0f 95 c1 49 83 ce 01 48 83 c8 01 0f b6 c9 48 c1 e1 02 49 09 ce 48 8d 4a 10 4c 89 72 08 <48> 89 46 08 8b 05 51 71 34 00 85 c0 0f 84 5f fa ff ff eb 9f 0f 1f
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438914] RSP: 002b:00007ffcfb1f2700 EFLAGS: 00010202
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438916] RAX: 0000000000008001 RBX: 00007f58b9ffc7b8 RCX: 0000000006ee8fe0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438918] RDX: 0000000006ee8fd0 RSI: 0000000006ee9000 RDI: 0000000000000000
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438919] RBP: 00007f58b9ffc760 R08: 0000000000000001 R09: 0000000000000028
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438920] R10: 0000000000000003 R11: 0000000000000000 R12: 0000000000000028
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438921] R13: 0000000000002710 R14: 0000000000000031 R15: 00007f58b9ffc7b8
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438923] memory: usage 1536000kB, limit 1536000kB, failcnt 4054
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438924] memory+swap: usage 1536000kB, limit 9007199254740988kB, failcnt 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438925] kmem: usage 281592kB, limit 9007199254740988kB, failcnt 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.438926] Memory cgroup stats for /kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd:
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] anon 1273663488
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] file 40960
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] kernel_stack 3145728
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] pagetables 14696448
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] percpu 1019904
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] sock 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] shmem 40960
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] file_mapped 4096
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] file_dirty 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] file_writeback 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] swapcached 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] anon_thp 119537664
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] file_thp 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] shmem_thp 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] inactive_anon 1283297280
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] active_anon 270336
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] inactive_file 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] active_file 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] unevictable 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] slab_reclaimable 261831232
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] slab_unreclaimable 6316432
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] slab 268147664
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] workingset_refault_anon 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] workingset_refault_file 2210
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] workingset_activate_anon 0
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439399] workingset_activate_file 14
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439403] Tasks state (memory values in pages):
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439403] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439405] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439409] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439411] [ 882884]     0 882884     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439413] [ 882885]     0 882885     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439415] [ 882886]     0 882886     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439417] [ 882887]     0 882887     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439419] [ 882888]     0 882888     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439421] [ 882889]     0 882889     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439422] [ 882891]     0 882891     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439424] [ 882893]     0 882893     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439426] [ 882894]  5000 882894   243631     4525   163840        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439428] [ 882896]     0 882896     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439430] [ 882898]  5000 882898   227311     3522   155648        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439432] [ 882899]     0 882899     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439434] [ 882900]  5000 882900   227535     3660   163840        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439446] [ 882901]  5000 882901   227375     4706   167936        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439450] [ 882902]     0 882902     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439454] [ 882903]  5000 882903   243983     4029   167936        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439457] [ 882904]  5000 882904   243631     3801   163840        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439459] [ 882905]     0 882905     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439461] [ 882906]  5000 882906   227535     3527   163840        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439463] [ 882907]     0 882907     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439466] [ 882908]  5000 882908   227727     4181   172032        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439468] [ 882910]     0 882910     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439471] [ 882911]  5000 882911   227727     4157   159744        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439474] [ 882913]  5000 882913   243631     4406   167936        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439477] [ 882915]     0 882915     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439479] [ 882919]  5000 882919   227599     3976   172032        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439482] [ 882920]     0 882920     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439485] [ 882921]     0 882921     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439487] [ 882922]  5000 882922   211215     3787   159744        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439489] [ 882923]  5000 882923   227311     3841   159744        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439491] [ 882924]     0 882924     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439494] [ 882925]  5000 882925   227599     4556   163840        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439496] [ 882926]     0 882926     6710      675    90112        0           999 crond
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439498] [ 882927]  5000 882927   227247     3550   155648        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439501] [ 882928]  5000 882928   227247     3985   159744        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439503] [ 882929]  5000 882929   227727     3960   172032        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439505] [ 882930]  5000 882930   227599     4000   159744        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439511] [ 882931]  5000 882931   243983     4546   167936        0           999 locker
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439514] [ 883090]  5000 883090    36335     8426   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439516] [ 883095]  5000 883095   159919    27916   757760        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439518] [ 883096]  5000 883096   158925    26849   733184        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439520] [ 883097]  5000 883097    36529     8582   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439522] [ 883098]  5000 883098   159230    27188   749568        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439525] [ 883099]  5000 883099   159321    27259   745472        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439527] [ 883103]  5000 883103    36316     8465   323584        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439529] [ 883105]  5000 883105   159197    27068   745472        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439531] [ 883106]  5000 883106   159158    27076   741376        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439533] [ 883107]  5000 883107   159156    27076   753664        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439535] [ 883108]  5000 883108    36346     8419   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439538] [ 883109]  5000 883109    36189     8296   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439540] [ 883111]  5000 883111    36075     8246   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439542] [ 883114]  5000 883114   159230    27250   749568        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439545] [ 883115]  5000 883115    36345     8420   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439547] [ 883116]  5000 883116    36175     8299   327680        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439548] [ 883117]  5000 883117   158659    26615   741376        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439550] [ 883121]  5000 883121    36077     8217   335872        0           999 python
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439552] [ 883123]  5000 883123   159388    27323   741376        0           999 framework
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439554] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,mems_allowed=0,oom_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd,task_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd/2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,task=framework,pid=883095,uid=5000
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.439577] Memory cgroup out of memory: Killed process 883095 (framework) total-vm:639676kB, anon-rss:90872kB, file-rss:20788kB, shmem-rss:4kB, UID:5000 pgtables:740kB oom_score_adj:999
+Sep  3 11:00:04 some-kube-node1 kernel: [34271733.452598] oom_reaper: reaped process 883095 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:4kB
+Sep  3 11:04:44 some-kube-node1 kernel: [34272013.235701] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 14:14:44 some-kube-node1 kernel: [34283412.424260] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 14:24:44 some-kube-node1 kernel: [34284012.372745] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 14:34:44 some-kube-node1 kernel: [34284612.349195] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 14:44:44 some-kube-node1 kernel: [34285212.280898] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 14:54:44 some-kube-node1 kernel: [34285812.283184] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822918] framework invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822925] CPU: 50 PID: 3863596 Comm: framework Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822928] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822929] Call Trace:
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822933]  dump_stack+0x41/0x60
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822938]  dump_header+0x4a/0x1db
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822942]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822945]  out_of_memory+0x1bd/0x4e0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822947]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822951]  try_charge+0x62e/0x660
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822954]  ? __alloc_pages_nodemask+0x166/0x310
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822958]  __mem_cgroup_charge+0x39/0xa0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822960]  mem_cgroup_charge+0x2f/0x90
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822962]  do_anonymous_page+0x94/0x300
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822965]  __handle_mm_fault+0x7a6/0x7e0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822967]  handle_mm_fault+0xc1/0x1e0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822969]  do_user_addr_fault+0x1b5/0x440
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822973]  do_page_fault+0x37/0x130
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822975]  ? page_fault+0x8/0x30
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822978]  page_fault+0x1e/0x30
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822980] RIP: 0033:0x7fc918e289c5
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822983] Code: 8d 34 32 4d 89 e1 48 39 cd 48 89 75 58 0f 95 c1 49 83 ce 01 48 83 c8 01 0f b6 c9 48 c1 e1 02 49 09 ce 48 8d 4a 10 4c 89 72 08 <48> 89 46 08 8b 05 51 71 34 00 85 c0 0f 84 5f fa ff ff eb 9f 0f 1f
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822984] RSP: 002b:00007ffee7fe5cd0 EFLAGS: 00010206
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822987] RAX: 00000000000128f1 RBX: 00007fc91916d7b8 RCX: 000000000796d710
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822988] RDX: 000000000796d700 RSI: 000000000796f710 RDI: 0000000000000003
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822989] RBP: 00007fc91916d760 R08: 0000000000000002 R09: 0000000000002000
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822990] R10: 000000000000006b R11: 0000000000000000 R12: 0000000000002000
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822991] R13: 000000000000270f R14: 0000000000002011 R15: 00007fc91916d7b8
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822993] memory: usage 1536000kB, limit 1536000kB, failcnt 4582
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822994] memory+swap: usage 1536000kB, limit 9007199254740988kB, failcnt 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822995] kmem: usage 311052kB, limit 9007199254740988kB, failcnt 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.822996] Memory cgroup stats for /kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd:
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] anon 1249984512
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] file 45056
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] kernel_stack 2818048
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] pagetables 13475840
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] percpu 1019904
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] sock 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] shmem 40960
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] file_mapped 4096
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] file_dirty 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] file_writeback 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] swapcached 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] anon_thp 106954752
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] file_thp 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] shmem_thp 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] inactive_anon 1253396480
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] active_anon 249856
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] inactive_file 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] active_file 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] unevictable 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] slab_reclaimable 294174912
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] slab_unreclaimable 5905712
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] slab 300080624
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] workingset_refault_anon 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] workingset_refault_file 2292
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] workingset_activate_anon 0
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823425] workingset_activate_file 15
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823431] Tasks state (memory values in pages):
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823432] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823434] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823438] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823441] [3863341]     0 3863341     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823443] [3863343]     0 3863343     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823445] [3863344]     0 3863344     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823448] [3863345]     0 3863345     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823450] [3863346]     0 3863346     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823453] [3863347]     0 3863347     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823455] [3863348]     0 3863348     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823458] [3863349]  5000 3863349   227311     4025   167936        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823460] [3863350]     0 3863350     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823463] [3863351]  5000 3863351   227599     4073   172032        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823465] [3863352]     0 3863352     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823467] [3863353]  5000 3863353   243983     4014   172032        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823470] [3863354]     0 3863354     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823472] [3863355]  5000 3863355   227663     4135   159744        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823475] [3863356]     0 3863356     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823477] [3863358]  5000 3863358   227599     3526   163840        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823480] [3863359]     0 3863359     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823482] [3863360]  5000 3863360   211215     4554   155648        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823485] [3863361]  5000 3863361   227183     3548   147456        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823488] [3863362]     0 3863362     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823491] [3863363]  5000 3863363   243631     4036   163840        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823494] [3863364]     0 3863364     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823497] [3863365]  5000 3863365   243983     3548   163840        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823499] [3863366]     0 3863366     6710      671    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823501] [3863367]  5000 3863367   244047     5057   172032        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823503] [3863368]     0 3863368     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823505] [3863369]  5000 3863369   244111     4163   167936        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823508] [3863370]     0 3863370     6710      675    90112        0           999 crond
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823510] [3863372]  5000 3863372   243983     4554   167936        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823513] [3863373]  5000 3863373   243631     4036   159744        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823515] [3863376]  5000 3863376   243759     4175   167936        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823517] [3863377]  5000 3863377   243631     3547   159744        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823520] [3863378]  5000 3863378   227375     4199   163840        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823525] [3863379]  5000 3863379   243695     4032   172032        0           999 locker
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823527] [3863588]  5000 3863588    36900     8962   339968        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823529] [3863589]  5000 3863589    36601     8702   323584        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823531] [3863590]  5000 3863590   164346    31803   790528        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823534] [3863591]  5000 3863591    36939     9021   339968        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823536] [3863592]  5000 3863592    36938     9051   335872        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823538] [3863593]  5000 3863593    37020     9121   327680        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823540] [3863594]  5000 3863594   162986    30478   782336        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823542] [3863595]  5000 3863595    36939     8990   331776        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823545] [3863596]  5000 3863596   163649    31044   778240        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823547] [3863597]  5000 3863597   159362    27333   753664        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823550] [3863598]  5000 3863598   162625    29967   765952        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823552] [3863599]  5000 3863599    35564     8156   327680        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823555] [3863600]  5000 3863600   165323    32820   794624        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823557] [3863602]  5000 3863602    36932     9047   335872        0           999 python
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823560] [3863601]  5000 3863601   162655    30065   778240        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823563] [3863603]  5000 3863603   158793    26710   741376        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823565] [3863604]  5000 3863604   158926    26851   749568        0           999 framework
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823567] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,mems_allowed=0,oom_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd,task_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd/2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,task=framework,pid=3863600,uid=5000
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.823581] Memory cgroup out of memory: Killed process 3863600 (framework) total-vm:661292kB, anon-rss:110312kB, file-rss:20960kB, shmem-rss:8kB, UID:5000 pgtables:776kB oom_score_adj:999
+Sep  3 15:00:04 some-kube-node1 kernel: [34286132.833063] oom_reaper: reaped process 3863600 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:8kB
+Sep  3 15:04:44 some-kube-node1 kernel: [34286412.266627] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 15:14:44 some-kube-node1 kernel: [34287012.187730] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 15:24:44 some-kube-node1 kernel: [34287612.134551] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 15:34:44 some-kube-node1 kernel: [34288212.119041] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 15:44:44 some-kube-node1 kernel: [34288811.997555] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 15:54:44 some-kube-node1 kernel: [34289411.990543] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 16:00:12 some-kube-node1 kernel: [34289739.777086] overlayfs: upperdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+Sep  3 16:00:12 some-kube-node1 kernel: [34289739.777095] overlayfs: workdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+Sep  3 16:04:44 some-kube-node1 kernel: [34290011.953471] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 16:14:44 some-kube-node1 kernel: [34290611.927175] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 16:24:44 some-kube-node1 kernel: [34291211.877665] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 16:34:44 some-kube-node1 kernel: [34291811.859200] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 16:44:44 some-kube-node1 kernel: [34292411.830121] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 16:54:44 some-kube-node1 kernel: [34293011.721265] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:04:44 some-kube-node1 kernel: [34293611.684768] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:13:24 some-kube-node1 kernel: [34294131.404340] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:14:44 some-kube-node1 kernel: [34294211.696532] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:24:44 some-kube-node1 kernel: [34294811.624334] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:34:44 some-kube-node1 kernel: [34295411.588193] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:44:44 some-kube-node1 kernel: [34296011.515425] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 17:54:44 some-kube-node1 kernel: [34296611.451172] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 18:04:44 some-kube-node1 kernel: [34297211.424799] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 18:14:44 some-kube-node1 kernel: [34297811.432976] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 18:24:44 some-kube-node1 kernel: [34298411.362356] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 18:34:44 some-kube-node1 kernel: [34299011.324565] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 18:44:44 some-kube-node1 kernel: [34299611.236115] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 18:54:44 some-kube-node1 kernel: [34300211.240117] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 19:04:44 some-kube-node1 kernel: [34300811.191193] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 19:14:44 some-kube-node1 kernel: [34301411.164561] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 19:24:44 some-kube-node1 kernel: [34302011.145841] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 19:34:44 some-kube-node1 kernel: [34302611.069362] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 19:44:44 some-kube-node1 kernel: [34303211.067674] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 19:54:44 some-kube-node1 kernel: [34303811.076715] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 20:04:44 some-kube-node1 kernel: [34304410.994739] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 20:14:44 some-kube-node1 kernel: [34305010.900111] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 20:24:44 some-kube-node1 kernel: [34305610.808141] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 20:34:44 some-kube-node1 kernel: [34306210.808413] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 20:44:44 some-kube-node1 kernel: [34306810.728433] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 20:54:44 some-kube-node1 kernel: [34307410.689325] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865813] framework invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865819] CPU: 91 PID: 1990532 Comm: framework Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865822] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865823] Call Trace:
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865826]  dump_stack+0x41/0x60
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865832]  dump_header+0x4a/0x1db
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865836]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865839]  out_of_memory+0x1bd/0x4e0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865842]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865845]  try_charge+0x62e/0x660
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865848]  ? __alloc_pages_nodemask+0x166/0x310
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865852]  __mem_cgroup_charge+0x39/0xa0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865854]  mem_cgroup_charge+0x2f/0x90
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865856]  do_anonymous_page+0x94/0x300
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865859]  __handle_mm_fault+0x7a6/0x7e0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865863]  ? ovl_read_iter+0x180/0x1b0 [overlay]
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865871]  handle_mm_fault+0xc1/0x1e0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865872]  do_user_addr_fault+0x1b5/0x440
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865876]  do_page_fault+0x37/0x130
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865878]  ? page_fault+0x8/0x30
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865881]  page_fault+0x1e/0x30
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865883] RIP: 0033:0x7f1accb709c5
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865885] Code: 8d 34 32 4d 89 e1 48 39 cd 48 89 75 58 0f 95 c1 49 83 ce 01 48 83 c8 01 0f b6 c9 48 c1 e1 02 49 09 ce 48 8d 4a 10 4c 89 72 08 <48> 89 46 08 8b 05 51 71 34 00 85 c0 0f 84 5f fa ff ff eb 9f 0f 1f
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865887] RSP: 002b:00007ffdfaa58350 EFLAGS: 00010206
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865889] RAX: 0000000000013001 RBX: 00007f1acceb57b8 RCX: 00000000071fffd0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865891] RDX: 00000000071fffc0 RSI: 0000000007200000 RDI: 0000000000000000
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865892] RBP: 00007f1acceb5760 R08: 0000000000000002 R09: 0000000000000038
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865893] R10: 0000000000000004 R11: 0000000000000000 R12: 0000000000000038
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865894] R13: 0000000000002710 R14: 0000000000000041 R15: 00007f1acceb57b8
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865896] memory: usage 1535880kB, limit 1536000kB, failcnt 5015
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865897] memory+swap: usage 1535880kB, limit 9007199254740988kB, failcnt 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865898] kmem: usage 428476kB, limit 9007199254740988kB, failcnt 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.865899] Memory cgroup stats for /kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd:
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] anon 1131765760
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] file 45056
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] kernel_stack 2506752
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] pagetables 11673600
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] percpu 1019904
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] sock 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] shmem 40960
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] file_mapped 4096
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] file_dirty 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] file_writeback 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] swapcached 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] anon_thp 94371840
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] file_thp 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] shmem_thp 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] inactive_anon 1133301760
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] active_anon 225280
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] inactive_file 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] active_file 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] unevictable 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] slab_reclaimable 417214080
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] slab_unreclaimable 5296176
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] slab 422510256
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] workingset_refault_anon 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] workingset_refault_file 2514
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] workingset_activate_anon 0
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866339] workingset_activate_file 17
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866344] Tasks state (memory values in pages):
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866345] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866346] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866351] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866354] [1990378]     0 1990378     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866357] [1990379]     0 1990379     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866360] [1990380]     0 1990380     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866362] [1990381]     0 1990381     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866365] [1990382]     0 1990382     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866367] [1990383]     0 1990383     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866369] [1990384]     0 1990384     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866372] [1990385]     0 1990385     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866374] [1990386]     0 1990386     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866377] [1990387]  5000 1990387   243983     4013   159744        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866379] [1990388]     0 1990388     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866382] [1990389]  5000 1990389   244047     3520   176128        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866384] [1990390]  5000 1990390   227663     4172   163840        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866387] [1990391]     0 1990391     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866389] [1990392]  5000 1990392   227663     4554   163840        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866392] [1990393]  5000 1990393   243631     3880   167936        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866395] [1990394]     0 1990394     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866398] [1990395]  5000 1990395   246160     5217   167936        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866401] [1990396]  5000 1990396   243631     4555   167936        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866404] [1990397]     0 1990397     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866406] [1990398]  5000 1990398   227247     3917   155648        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866408] [1990399]     0 1990399     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866410] [1990400]  5000 1990400   210863     4549   159744        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866412] [1990401]     0 1990401     6710      675    90112        0           999 crond
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866414] [1990402]  5000 1990402   227599     3549   163840        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866416] [1990403]  5000 1990403   227599     4041   163840        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866417] [1990404]  5000 1990404   227247     3663   155648        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866419] [1990405]  5000 1990405   243631     3528   159744        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866421] [1990406]  5000 1990406   227375     4318   167936        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866426] [1990407]  5000 1990407   227535     3806   159744        0           999 locker
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866428] [1990516]  5000 1990516    36967     9061   339968        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866430] [1990517]  5000 1990517   165322    32776   798720        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866432] [1990518]  5000 1990518   164775    32215   802816        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866433] [1990519]  5000 1990519   165323    32825   790528        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866435] [1990520]  5000 1990520    37028     9101   331776        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866437] [1990521]  5000 1990521   165621    33051   798720        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866439] [1990522]  5000 1990522    37029     9117   335872        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866440] [1990523]  5000 1990523    39077     9581   335872        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866442] [1990524]  5000 1990524    36929     9013   327680        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866444] [1990525]  5000 1990525   165489    32957   798720        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866446] [1990526]  5000 1990526    37039     9104   344064        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866448] [1990527]  5000 1990527    37078     9101   348160        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866449] [1990528]  5000 1990528    37043     9135   331776        0           999 python
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866451] [1990532]  5000 1990532   165886    33335   798720        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866453] [1990533]  5000 1990533   164181    31680   786432        0           999 framework
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866454] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,mems_allowed=0,oom_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd,task_memcg=/kubepods/burstable/pod62015ce8-a46f-4b0e-a5a1-3082235c62dd/2cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33187,task=framework,pid=1990532,uid=5000
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.866464] Memory cgroup out of memory: Killed process 1990532 (framework) total-vm:663544kB, anon-rss:112672kB, file-rss:20660kB, shmem-rss:8kB, UID:5000 pgtables:780kB oom_score_adj:999
+Sep  3 21:00:04 some-kube-node1 kernel: [34307730.874418] oom_reaper: reaped process 1990532 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:8kB
+Sep  3 21:04:44 some-kube-node1 kernel: [34308010.713306] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 22:04:44 some-kube-node1 kernel: [34311610.378960] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 23:04:44 some-kube-node1 kernel: [34315210.123367] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 23:14:26 some-kube-node1 kernel: [34315792.711924] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 23:24:44 some-kube-node1 kernel: [34316410.039610] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 23:34:44 some-kube-node1 kernel: [34317009.996036] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 23:44:44 some-kube-node1 kernel: [34317609.954430] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 23:54:44 some-kube-node1 kernel: [34318209.940751] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
