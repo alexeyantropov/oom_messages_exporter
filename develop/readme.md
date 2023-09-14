@@ -7,7 +7,7 @@ Originally I use MacOS for developing and write all scripts for Mac. Ispite of t
 
 ### Install the miniconda distro if it's needed 
 ```
-# curl -o /tmp/m.sh -s https://repo.anaconda.com/miniconda/Miniconda3-py39_23.5.2-0-MacOSX-arm64.sh && bash /tmp/m.sh -b -p $HOME/miniconda
+# curl -o /tmp/m.sh -s https://repo.anaconda.com/miniconda/Miniconda3-py39_23.5.2-0-MacOSX-$(uname -m).sh && bash /tmp/m.sh -b -p $HOME/miniconda
 ```
 
 ### Prepare a separate env
