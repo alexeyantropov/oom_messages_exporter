@@ -1,6 +1,6 @@
 #!/bin/bash
 
-env_file='./develop/.env'
+env_file='./develop/const.env'
 
 if ! test -f $env_file; then
     echo "The env file ${env_file} is not found."

@@ -1,5 +1,5 @@
 #!/bin/bash
-env_file='./develop/.env'
+env_file='./develop/const.env'
 cov_report_dir='./tests/cov-report'
 
 if ! test -f $env_file; then

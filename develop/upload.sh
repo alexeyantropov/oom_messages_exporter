@@ -7,7 +7,7 @@ check_file () {
     fi
 }
 
-env_file='./develop/.env'
+env_file='./develop/const.env'
 check_file $env_file
 source $env_file 
 export $(eval "echo \"$(cat $env_file)\"")
