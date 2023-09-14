@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "oom_messages_exporter"
-version = "20230913"
+version = "20230914"
 dependencies = [
     "prometheus_client>=0.17.1"
 ]
