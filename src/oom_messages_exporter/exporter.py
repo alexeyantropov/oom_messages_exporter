@@ -97,7 +97,7 @@ class Exporter:
         if m and m.group(1):
             logging.info('Got proc name: "{}"'.format(m.group(1)))
             return(m.group(1))
-        return('Could not get a proc name from a string "{}".'.format(line))
+        return('Could not get a proc name from a line.')
     
     def __extract_cri_data(self, pid: int) -> list:
 
@@ -124,7 +124,7 @@ class Exporter:
         
         # Data about container should saved into additional storage for future use.
         if self.__string_has_container(line):
-            logging.info('Got container data, content: "{}"'.format(line))
+            logging.info('Have got container data, transmit the data to pid collector')
             tmp = self.pid_collection.add(line)
             if tmp > 0:
                 logging.info('Container is added for a pid: "{}"'.format(tmp))
@@ -135,7 +135,7 @@ class Exporter:
         # Counters would be incremented if OOM Killer killed a process.
         # Also the code below tries to add extra data about the killed process if the process worked in a container runtime.
         if self.__string_has_oom(line):
-            logging.info('Got OOM in string, content: "{}"'.format(line))
+            logging.info('Got OOM Killer in a line')
 
             pid = self.__extract_pid(line, self.oom_sign_cgroup)
             labels = [pid, self.__extract_proc_name(line, self.oom_sign_cgroup)] + self.__extract_cri_data(pid)

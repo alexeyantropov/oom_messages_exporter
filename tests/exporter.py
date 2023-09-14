@@ -54,7 +54,7 @@ def test_extract_proc_name___Ok():
 
 def test_extract_proc_name___Fail():
     oom_sign_cgroup = ex.oom_sign_cgroup
-    assert ex._Exporter__extract_proc_name(string_wo_oom, oom_sign_cgroup) == 'Could not get a proc name from a string "just a line".'
+    assert ex._Exporter__extract_proc_name(string_wo_oom, oom_sign_cgroup) == 'Could not get a proc name from a line.'
 
 def test_process_data___OOM_Sign_is_present():
     ex._Exporter__process_data(cri_line_with_oom)
