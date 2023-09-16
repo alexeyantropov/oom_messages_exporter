@@ -1,0 +1,9 @@
+{
+    "status": {
+      "labels": {
+        "io.kubernetes.container.name": "php-fpm",
+        "io.kubernetes.pod.name": "a-legacy-app",
+        "io.kubernetes.pod.namespace": "oldwebsite"
+      }
+    }
+}

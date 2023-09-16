@@ -1,24 +1,24 @@
 # OOM Messages Exporter
 An exporter for providing OOM Killer's kills in the Prometheus format. The exporter is compatible with containers runtimes and could be useful to investigate OOM Killer activity inside containers, servers or vms.
 
-# Example data
-The main metric is 'oom_messages_exporter_kills_total' that provides a counter of OOM kills since the exporter has started.
+# Examples
+The main metrics are 'oom_messages_exporter_last_killed_pid' and 'oom_messages_exporter_last_killed_time' those provide values of the last pid and the last time of killed processes since the exporter has started. You can configure Alertmanager on the ..._time metric  (value > now - last Xh) or on a change of the ..._pid metric by expression delta(_pid[xH]) != 0 function. Also you can combine both metric to get better alerts experience.
 
 Provided labels are:
-- pid - a pid of a killed process;
 - command - a proc title of a killed process;
 - namespace (opt, containers runtimes only)
 - pod (opt, containers runtimes only)
 - container (opt, containers runtimes only)
 ## OOM in kubernetes containers
 ```
-oom_messages_exporter_kills_total{pid="3967383", command="node /opt/www/p",container="nodejs",namespace="lovely-project",pod="awesome-backend"} 1.0
-oom_messages_exporter_kills_total{pid="1560850", command="node /opt/www/p",container="nodejs",namespace="lovely-project",pod="awesome-backend"} 1.0
+oom_messages_exporter_last_killed_pid{command="php-fpm: pool w",container="php-fpm",namespace="oldwebsite",pod="a-legacy-app"} 235362.0
+oom_messages_exporter_last_killed_time{command="framework",container="nodejs",namespace="lovely-project",pod="awesome-backend"} 1.69484585513779e+09
 ```
 ## OOM in bare metal
 For this case labels about containers runtime should be as 'None'
 ```
-oom_messages_exporter_kills_total{command="python3.8",pid="3319125",container="None",namespace="None",pod="None"} 1.0
+oom_messages_exporter_last_killed_pid{command="node /opt/www/p",container="None",namespace="None",pod="None"} 24190.0
+oom_messages_exporter_last_killed_time{command="node /opt/www/p",container="None",namespace="None",pod="None"} 1.6948459852485702e+09
 ```
 # How to run
 ## examples
@@ -30,16 +30,13 @@ Collecting OOM Killer messages inside containers:
 ```
 # ./examples/exporter-systemd.sh
 ```
-Output:
+Output (exporter-container.sh):
 ```
-$ curl -s http://localhost:9001/ | fgrep oom_messages_exporter_kills_total
-# HELP oom_messages_exporter_kills_total The count of OOM operations, label "pid" has pid of a killed process, the label "command" is a proc title of the killed process.
-# TYPE oom_messages_exporter_kills_total counter
-oom_messages_exporter_kills_total{command="framework",container="nodejs",namespace="lovely-project",pid="3967383",pod="awesome-backend"} 1.0
-oom_messages_exporter_kills_total{command="framework",container="nodejs",namespace="lovely-project",pid="1560850",pod="awesome-backend"} 1.0
-oom_messages_exporter_kills_total{command="framework",container="nodejs",namespace="lovely-project",pid="3319125",pod="awesome-backend"} 1.
-oom_messages_exporter_kills_total{command="framework",container="nodejs",namespace="lovely-project",pid="883095",pod="awesome-backend"} 1.0
-oom_messages_exporter_kills_total{command="framework",container="nodejs",namespace="lovely-project",pid="3863600",pod="awesome-backend"} 1.0
+$ curl -s http://localhost:9001/ | egrep -v '^#' | grep oom_messages_exporter_last_killed_
+oom_messages_exporter_last_killed_pid{command="framework",container="nodejs",namespace="lovely-project",pod="awesome-backend"} 1.990532e+06
+oom_messages_exporter_last_killed_pid{command="php-fpm: pool w",container="php-fpm",namespace="oldwebsite",pod="a-legacy-app"} 235362.0
+oom_messages_exporter_last_killed_time{command="framework",container="nodejs",namespace="lovely-project",pod="awesome-backend"} 1.69484585513779e+09
+oom_messages_exporter_last_killed_time{command="php-fpm: pool w",container="php-fpm",namespace="oldwebsite",pod="a-legacy-app"} 1.694845840949523e+09
 ```
 ## Production
 ```
