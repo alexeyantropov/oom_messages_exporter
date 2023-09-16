@@ -118,6 +118,122 @@ Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387192] oom-kill:constraint=CO
 Sep  3 05:00:04 some-kube-node1 kernel: [34250135.387210] Memory cgroup out of memory: Killed process 3967383 (framework) total-vm:736636kB, anon-rss:185936kB, file-rss:20704kB, shmem-rss:8kB, UID:5000 pgtables:920kB oom_score_adj:999
 Sep  3 05:00:04 some-kube-node1 kernel: [34250135.390494] oom_reaper: reaped process 3967383 (framework), now anon-rss:0kB, file-rss:0kB, shmem-rss:8kB
 Sep  3 05:04:44 some-kube-node1 kernel: [34250414.760271] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386887] php-fpm: pool w invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386893] CPU: 32 PID: 2920653 Comm: php-fpm: pool w Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386895] Hardware name: Super Server INC. Ultra series, BIOS 0.0.1
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386896] Call Trace:
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386900]  dump_stack+0x41/0x60
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386905]  dump_header+0x4a/0x1db
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386909]  oom_kill_process.cold.32+0xb/0x10
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386912]  out_of_memory+0x1bd/0x4e0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386914]  mem_cgroup_out_of_memory+0xe8/0x100
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386917]  try_charge+0x62e/0x660
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386920]  ? __alloc_pages_nodemask+0x166/0x310
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386923]  __mem_cgroup_charge+0x39/0xa0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386925]  mem_cgroup_charge+0x2f/0x90
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386927]  do_anonymous_page+0x94/0x300
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386930]  __handle_mm_fault+0x7a6/0x7e0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386932]  handle_mm_fault+0xc1/0x1e0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386934]  do_user_addr_fault+0x1b5/0x440
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386938]  do_page_fault+0x37/0x130
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386940]  ? page_fault+0x8/0x30
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386942]  page_fault+0x1e/0x30
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386944] RIP: 0033:0x7fc9a53778be
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386946] Code: 08 03 00 00 48 29 ea 31 c9 4c 39 fb 0f 95 c1 48 8d 34 28 48 83 cd 01 48 c1 e1 02 48 83 ca 01 48 09 cd 48 89 73 58 48 89 68 08 <48> 89 56 08 48 83 c0 10 48 83 c4 58 5b 5d 41 5c 41 5d 41 5e 41 5f
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386948] RSP: 002b:00007ffe395e5b10 EFLAGS: 00010202
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386950] RAX: 000000000654afe0 RBX: 00007fc9a56bd760 RCX: 0000000000000000
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386951] RDX: 0000000000020fc1 RSI: 000000000654b040 RDI: 000000000656c000
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386952] RBP: 0000000000000061 R08: 000000000654b000 R09: 0000000000000058
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386953] R10: 0000000000021000 R11: fffffffffffff000 R12: 000000000654afe0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386954] R13: 0000000000021021 R14: 0000000000000fff R15: 00007fc9a56bd760
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386956] memory: usage 1536000kB, limit 1536000kB, failcnt 3235
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386957] memory+swap: usage 1536000kB, limit 9007199254740988kB, failcnt 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386958] kmem: usage 198328kB, limit 9007199254740988kB, failcnt 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.386959] Memory cgroup stats for /kubepods/burstable/pod72015ce8-a46a-4c0e-a5b1-3082235c62df:
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] anon 1357508608
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] file 40960
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] kernel_stack 2899968
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] pagetables 13590528
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] percpu 1019904
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] sock 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] shmem 40960
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] file_mapped 4096
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] file_dirty 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] file_writeback 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] swapcached 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] anon_thp 268435456
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] file_thp 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] shmem_thp 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] inactive_anon 1368444928
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] active_anon 249856
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] inactive_file 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] active_file 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] unevictable 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] slab_reclaimable 178584976
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] slab_unreclaimable 5768880
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] slab 184353856
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] workingset_refault_anon 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] workingset_refault_file 1916
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] workingset_activate_anon 0
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387088] workingset_activate_file 13
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387091] Tasks state (memory values in pages):
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387092] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387094] [2335596] 65534 2335596      243        1    28672        0          -998 pause
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387097] [2352927]     0 2352927     5681      705    81920        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387100] [3967202]     0 3967202     6711      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387102] [3967213]  5000 3967213   262768     6815   180224        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387104] [235362]  5000 235362   184159    51662   942080        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387106] [2920462]     0 2920462     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387108] [2920463]     0 2920463     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387109] [2920464]     0 2920464     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387112] [2920465]     0 2920465     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387113] [2920466]     0 2920466     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387115] [2920467]     0 2920467     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387117] [2920468]     0 2920468     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387119] [2920469]  5000 2920469   227727     4276   172032        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387121] [2920470]     0 2920470     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387122] [2920472]  5000 2920472   227311     4035   159744        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387124] [2920473]     0 2920473     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387126] [2920474]  5000 2920474   227247     4152   167936        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387127] [2920475]     0 2920475     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387129] [2920477]  5000 2920477   227599     4032   163840        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387131] [2920478]  5000 2920478   227247     4549   163840        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387132] [2920479]     0 2920479     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387134] [2920481]  5000 2920481   243759     4198   159744        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387136] [2920482]     0 2920482     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387138] [2920483]  5000 2920483   243759     4158   163840        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387139] [2920484]     0 2920484     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387141] [2920485]  5000 2920485   211215     4526   163840        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387143] [2920486]  5000 2920486   227311     4060   159744        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387145] [2920487]     0 2920487     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387147] [2920488]  5000 2920488   227599     4570   167936        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387148] [2920489]     0 2920489     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387150] [2920490]     0 2920490     6710      675    90112        0           999 crond
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387152] [2920491]  5000 2920491   243983     4017   167936        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387154] [2920492]  5000 2920492   243631     4058   159744        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387156] [2920493]  5000 2920493   227247     4035   163840        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387157] [2920494]  5000 2920494   227247     5053   159744        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387159] [2920495]  5000 2920495   243983     4061   172032        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387163] [2920496]  5000 2920496   243759     4173   172032        0           999 locker
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387164] [2920641]  5000 2920641    36920     9047   327680        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387166] [2920642]  5000 2920642    36339     8372   323584        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387168] [2920643]  5000 2920643   162760    30097   774144        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387169] [2920644]  5000 2920644    36946     9053   327680        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387171] [2920645]  5000 2920645   162424    29842   765952        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387173] [2920646]  5000 2920646    36889     8700   323584        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387175] [2920647]  5000 2920647   163250    30717   778240        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387177] [2920648]  5000 2920648    36496     8666   335872        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387178] [2920649]  5000 2920649   161117    28983   761856        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387180] [2920650]  5000 2920650    35544     8112   319488        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387182] [2920651]  5000 2920651   163387    30807   778240        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387184] [2920652]  5000 2920652    36945     8951   335872        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387185] [2920654]  5000 2920654    36933     9003   331776        0           999 python
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387187] [2920653]  5000 2920653   162628    29943   757760        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387189] [2920655]  5000 2920655   158990    26941   741376        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387191] [2920656]  5000 2920656   162294    29700   765952        0           999 php-fpm: pool w
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387192] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=3cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33188,mems_allowed=0,oom_memcg=/kubepods/burstable/pod72015ce8-a46a-4c0e-a5b1-3082235c62df,task_memcg=/kubepods/burstable/pod72015ce8-a46a-4c0e-a5b1-3082235c62df/3cc85334e5030168b240f87215d26ecb97dd99c09237bd0a03d8957dafb33188,task=php-fpm: pool w,pid=235362,uid=5000
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.387210] Memory cgroup out of memory: Killed process 235362 (php-fpm: pool w) total-vm:736636kB, anon-rss:185936kB, file-rss:20704kB, shmem-rss:8kB, UID:5000 pgtables:920kB oom_score_adj:999
+Sep  3 05:32:04 some-kube-node1 kernel: [34250135.390494] oom_reaper: reaped process 235362 (php-fpm: pool w), now anon-rss:0kB, file-rss:0kB, shmem-rss:8kB
 Sep  3 08:54:44 some-kube-node1 kernel: [34264213.776858] sr 16:0:0:0: [sr0] CDROM not ready.  Make sure there is a disc in the drive.
 Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070034] framework invoked oom-killer: gfp_mask=0x6000c0(GFP_KERNEL), order=0, oom_score_adj=999
 Sep  3 09:00:04 some-kube-node1 kernel: [34264534.070040] CPU: 62 PID: 1560851 Comm: framework Not tainted 4.18.0-0.0.0.el8_99.x86_64 #1

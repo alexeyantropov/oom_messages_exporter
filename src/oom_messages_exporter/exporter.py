@@ -6,7 +6,7 @@ import re
 from .filetailer import FileTailer
 from .cricollector import CriCollector
 
-from prometheus_client import Counter, start_http_server
+from prometheus_client import Gauge, start_http_server
 
 class Exporter:
 
@@ -27,7 +27,8 @@ class Exporter:
         self.tailer = self.__tailer_setup()
         if self.tailer is None: # You can't init the class if log does not exist!
             raise FileNotFoundError(log)
-        self.metrics_name = 'oom_messages_exporter_kills'
+        self.metrics_name_for_pid = 'oom_messages_exporter_last_killed_pid'
+        self.metrics_name_for_time = 'oom_messages_exporter_last_killed_time'
         self.oom_sign_cgroup = 'Killed process'
         self.container_sign = '] oom-kill:'
         self.__metrics_setup()
@@ -42,9 +43,12 @@ class Exporter:
         Initialization of prometheus metrics.
         """
 
-        labels = ['pid', 'command', 'namespace', 'pod', 'container']
-        self.kills = Counter(self.metrics_name,
-            'The count of OOM operations, label "pid" has pid of a killed process, the label "command" is a proctitle of the killed process.',
+        labels = ['command', 'namespace', 'pod', 'container']
+        self.last_killed_pid = Gauge(self.metrics_name_for_pid,
+            'The last pid killed by OOM killer',
+            labels)
+        self.last_killed_time = Gauge(self.metrics_name_for_time,
+            'The last time when a pid is killed by OOM killer',
             labels)
         
     def __tailer_setup(self) -> FileTailer:
@@ -138,8 +142,9 @@ class Exporter:
             logging.info('Got OOM Killer in a line')
 
             pid = self.__extract_pid(line, self.oom_sign_cgroup)
-            labels = [pid, self.__extract_proc_name(line, self.oom_sign_cgroup)] + self.__extract_cri_data(pid)
-            self.kills.labels(*labels).inc(1)
+            labels = [self.__extract_proc_name(line, self.oom_sign_cgroup)] + self.__extract_cri_data(pid)
+            self.last_killed_pid.labels(*labels).set(pid)
+            self.last_killed_time.labels(*labels).set_to_current_time()
 
             return('has oom')
 
@@ -170,9 +175,10 @@ class Exporter:
                 data = test_data
             
             if len(data) > 0:
-                logging.info('Data occurred in log, amount of lines: "{}"'.format(len(data)))
+                logging.debug('Data occurred in log, amount of lines: "{}"'.format(len(data)))
             for line in data:
                 self.__process_data(line)
+                
             time.sleep(self.interval)
 
         return(True)
