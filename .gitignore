@@ -161,3 +161,4 @@ cython_debug/
 # oom_messages_exporter
 cov-report
 .pypirc*
+.DS_Store
