@@ -88,7 +88,7 @@ class Exporter:
         regexp = r'{} (\d*)'.format(sign)
         m = re.search(regexp, line, flags=re.IGNORECASE)
         if m and m.group(1).isdigit():
-            logging.info('Got pid: "{}"'.format(m.group(1)))
+            logging.warning('Got pid: "{}"'.format(m.group(1)))
             return(int(m.group(1)))
         return(-1)
     
@@ -99,7 +99,7 @@ class Exporter:
         regexp = r'{} \d* \((.*)\)\,?'.format(sign)
         m = re.search(regexp, line, flags=re.IGNORECASE)
         if m and m.group(1):
-            logging.info('Got proc name: "{}"'.format(m.group(1)))
+            logging.warning('Got proc name: "{}"'.format(m.group(1)))
             return(m.group(1))
         return('Could not get a proc name from a line.')
     
@@ -111,6 +111,7 @@ class Exporter:
 
         pod_namespace, pod_name, container_name = None, None, None
         container_data = self.pid_collection.get(pid)
+        
         if container_data:
             if 'pod_namespace' in container_data:
                 pod_namespace = container_data['pod_namespace']
@@ -118,6 +119,7 @@ class Exporter:
                 pod_name = container_data['pod_name']
             if 'container_name' in container_data:
                 container_name = container_data['container_name']
+
         return([pod_namespace, pod_name, container_name])
 
     def __process_data(self, line: str) -> str:
@@ -128,10 +130,12 @@ class Exporter:
         
         # Data about container should saved into additional storage for future use.
         if self.__string_has_container(line):
-            logging.info('Have got container data, transmit the data to pid collector')
+
+            logging.warning('Have got container data, transmit the data to pid collector')
             tmp = self.pid_collection.add(line)
+
             if tmp > 0:
-                logging.info('Container is added for a pid: "{}"'.format(tmp))
+                logging.warning('Container is added for a pid: "{}"'.format(tmp))
                 return('has container: is added')
             
             return('has container: is not added')
@@ -139,7 +143,7 @@ class Exporter:
         # Counters would be incremented if OOM Killer killed a process.
         # Also the code below tries to add extra data about the killed process if the process worked in a container runtime.
         if self.__string_has_oom(line):
-            logging.info('Got OOM Killer in a line')
+            logging.warning('Got OOM Killer in a line')
 
             pid = self.__extract_pid(line, self.oom_sign_cgroup)
             labels = [self.__extract_proc_name(line, self.oom_sign_cgroup)] + self.__extract_cri_data(pid)
@@ -201,7 +205,7 @@ def main(): # pragma: no cover
 
     # The exporter setup
     ex = Exporter(log=messages_log, interval=poll_interval, test_enable=test_enable)
-    logging.info('oom_messages_exporter started! port: {}.'.format(exporter_port))
+    logging.warning('oom_messages_exporter started! port: {}.'.format(exporter_port))
 
     # Run it!
     ex.run_metrics_loop()

@@ -72,17 +72,20 @@ def test_add___Wrong_Line():
 def test_add___crictl_mock_fail():
     cc_mocked = oom_messages_exporter.CriCollector()
     cc_mocked.crictl, cc_mocked.socket = cc_mocked.test_binary, cc_mocked.test_socket
-    assert cc_mocked.add(line_with_oom_not_existen_container) == -1
+    assert cc_mocked.add(line_with_oom_not_existen_container) == line_with_oom_pid
+    assert cc_mocked.get(line_with_oom_pid)['container_name'] == 'NotFound'
 
 def test_add___crictl_mock_no_json():
     cc_mocked = oom_messages_exporter.CriCollector()
     cc_mocked.crictl, cc_mocked.socket = './tests/crictl-mock_no_json.sh', cc_mocked.test_socket
-    assert cc_mocked.add(line_with_oom) == -1
+    assert cc_mocked.add(line_with_oom_not_existen_container) == line_with_oom_pid
+    assert cc_mocked.get(line_with_oom_pid)['container_name'] == 'NotFound'
 
 def test_add___crictl_mock_empty_json():
     cc_mocked = oom_messages_exporter.CriCollector()
     cc_mocked.crictl, cc_mocked.socket = './tests/crictl-mock_empty_json.sh', cc_mocked.test_socket
-    assert cc_mocked.add(line_with_oom) == -1
+    assert cc_mocked.add(line_with_oom_not_existen_container) == line_with_oom_pid
+    assert cc_mocked.get(line_with_oom_pid)['container_name'] == 'NotFound'
     
 def test_add___Well():
     cc_mocked = oom_messages_exporter.CriCollector()
