@@ -129,7 +129,7 @@ class FileTailer:
 
         if self.__file_is_rotated():
             if self.__open_file(0):
-                logging.info('The "{}" file is reopened, inode: {}.'.format(self.file_name, self.file_stats['inode']))
+                logging.warning('The "{}" file is reopened, inode: {}.'.format(self.file_name, self.file_stats['inode']))
             else:
                 logging.critical('The "{}" file is NOT reopened, will try again next time'.format(self.file_name))
 

@@ -58,12 +58,12 @@ class CriCollector:
         """
 
         if test_binary:
-            logging.info('Using a test stub for crictl.')
+            logging.warning('Using a test stub for crictl.')
             return(self.test_binary)
         
         tmp = which('crictl', path=test_path)  
         if tmp and len(tmp) > 0:
-            logging.info('The crictl is found: "{}".'.format(tmp))
+            logging.warning('The crictl is found: "{}".'.format(tmp))
             return(tmp)
 
         logging.critical('An exe "crictl" is not found!')
@@ -76,18 +76,18 @@ class CriCollector:
         """
 
         if test_socket:
-            logging.info('Using a test stub for runtime socket.')
+            logging.warning('Using a test stub for runtime socket.')
             return(self.test_socket)
         
         if not crictl:
-            logging.info('A path to crictl is not provided.')
+            logging.warning('A path to crictl is not provided.')
             return(None)
         
         known_socks = ['dockershim.sock', 'containerd.sock', 'crio.sock']
         for sock in known_socks:
             p = Path('{}/{}'.format(run_dir, sock)) 
             if p.exists():
-                logging.info('Runtine socket is found: "{}".'.format(str(p)))
+                logging.warning('Runtine socket is found: "{}".'.format(str(p)))
                 return(str(p))
         
         logging.critical('Runtime socket is not found!')
@@ -141,7 +141,7 @@ class CriCollector:
         regex = r'pid=(\d*),'
         tmp = re.search(regex, line, flags=re.IGNORECASE)
         if tmp and tmp.group(1).isdigit():
-            logging.info('Got pid: "{}"'.format(tmp.group(1)))
+            logging.warning('Got pid: "{}"'.format(tmp.group(1)))
             return(int(tmp.group(1)))
         
         return(-1)
@@ -158,7 +158,7 @@ class CriCollector:
 
         if tmp and tmp.group(1):
             ct_id =  tmp.group(1).split('/')[-1]
-            logging.info('Got ct id: "{}"'.format(ct_id))
+            logging.warning('Got ct id: "{}"'.format(ct_id))
             return(ct_id)
         
         return(None)
