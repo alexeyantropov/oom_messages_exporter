@@ -110,12 +110,12 @@ class CriCollector:
         crictl_out = subprocess.run(cmd, capture_output=True, text=True)
 
         if len(crictl_out.stderr) > 0:
-            return(ContainerLabels())
+            return(ContainerLabels(container_name='NotFound'))
 
         try:
             crictl_out_json = json.loads(crictl_out.stdout)
         except:
-            return(ContainerLabels())
+            return(ContainerLabels(container_name='NotFound'))
 
         if 'status' in crictl_out_json and 'labels' in crictl_out_json['status']:
             ret = ContainerLabels()
@@ -127,10 +127,11 @@ class CriCollector:
                 ret['pod_name'] = labels['io.kubernetes.pod.name']
             if 'io.kubernetes.pod.namespace' in labels:
                 ret['pod_namespace'] = labels['io.kubernetes.pod.namespace']
+
             return(ret)
         
         # Nothing is found, return an empty data set.
-        return(ContainerLabels())
+        return(ContainerLabels(container_name='NotFound'))
     
     def get_pid_from_oom_line(self, line: str) -> int:
 

@@ -111,6 +111,7 @@ class Exporter:
 
         pod_namespace, pod_name, container_name = None, None, None
         container_data = self.pid_collection.get(pid)
+        
         if container_data:
             if 'pod_namespace' in container_data:
                 pod_namespace = container_data['pod_namespace']
@@ -118,6 +119,7 @@ class Exporter:
                 pod_name = container_data['pod_name']
             if 'container_name' in container_data:
                 container_name = container_data['container_name']
+
         return([pod_namespace, pod_name, container_name])
 
     def __process_data(self, line: str) -> str:
@@ -128,8 +130,10 @@ class Exporter:
         
         # Data about container should saved into additional storage for future use.
         if self.__string_has_container(line):
+
             logging.warning('Have got container data, transmit the data to pid collector')
             tmp = self.pid_collection.add(line)
+
             if tmp > 0:
                 logging.warning('Container is added for a pid: "{}"'.format(tmp))
                 return('has container: is added')
